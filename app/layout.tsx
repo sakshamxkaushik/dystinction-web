@@ -3,7 +3,7 @@ import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
-  title: "DYSTINCTION - Coming Soon",
+  title: "DYSTINCTION -  Soon",
   description:
     "Advanced technology solutions operating beyond conventional boundaries. Where innovation meets discretion.",
     generator: 'v0.dev'
