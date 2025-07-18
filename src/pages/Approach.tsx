@@ -113,7 +113,7 @@ const differentiators = [
 
 const Approach = () => {
   return (
-    <div className="min-h-screen bg-gradient-hero pt-20">
+    <div className="min-h-screen bg-gradient-hero pt-20 sm:pt-24">
       <div className="container mx-auto px-6 py-12">
         {/* Hero Section */}
         <div className="text-center mb-20">

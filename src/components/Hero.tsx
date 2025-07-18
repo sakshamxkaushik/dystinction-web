@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-2 sm:px-6">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-2 sm:px-6 pt-20 sm:pt-24">
       {/* Background glow effects */}
       <div className="absolute inset-0 bg-gradient-hero opacity-90" />
       <div className="absolute top-20 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-primary/20 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-1/4 w-56 h-56 sm:w-80 sm:h-80 bg-secondary/20 rounded-full blur-3xl" />
 
-      <div className="relative container mx-auto px-2 sm:px-6 text-center">
+      <div className="relative container mx-auto px-3 sm:px-6 text-center">
         {/* Trust indicators */}
         <div className="mb-6 sm:mb-8 flex justify-center">
           <div className="glass-card inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3">
             <Shield className="w-4 h-4 text-primary" />
             <span className="text-xs sm:text-sm text-muted-foreground">
-              Trusted by 50+ enterprise clients
+              Trusted by 26+ enterprise clients
             </span>
           </div>
         </div>
