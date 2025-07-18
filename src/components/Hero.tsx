@@ -22,7 +22,7 @@ const Hero = () => {
         </div>
 
         {/* Main headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-glow">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-glow">
           Enterprise Software That{" "}
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Actually Works
@@ -30,7 +30,7 @@ const Hero = () => {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
           Transform complex business operations into competitive advantages with
           purpose-built platforms that scale at enterprise speed.
         </p>
