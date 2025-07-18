@@ -30,8 +30,8 @@ const Navigation = () => {
         isScrolled || isOpen ? "glass-card backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-3 sm:px-6">
+        <div className="flex items-center justify-between min-h-[56px] sm:min-h-[68px]">
           <Link
             to="/"
             onClick={(e) => {
@@ -40,9 +40,9 @@ const Navigation = () => {
             className="flex items-center"
           >
             <img
-              src={isScrolled || isOpen || location.pathname === "/" ? "/images/logow.png" : "/images/logo.png"}
+              src={isScrolled || isOpen || location.pathname === "/" ? "/images/logo.png" : "/images/logo.png"}
               alt="Dystinction Logo"
-              className="h-16 md:h-16 w-auto object-contain"
+              className="h-10 w-auto object-contain sm:h-16 transition-all duration-200"
             />
           </Link>
 
@@ -50,7 +50,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+
                 to={item.href}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
                   location.pathname === item.href
@@ -68,7 +68,7 @@ const Navigation = () => {
             <Button variant="liquid" size="sm" asChild>
               <Link to="/book-consultation">
                 <Calendar className="w-4 h-4 mr-2" />
-                Schedule Deep Dive
+                Schedule a Meet
               </Link>
             </Button>
           </div>
@@ -76,7 +76,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-white hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -103,7 +103,7 @@ const Navigation = () => {
               <Button variant="liquid" size="sm" className="mt-4" asChild>
                 <Link to="/book-consultation" onClick={() => setIsOpen(false)}>
                   <Calendar className="w-4 h-4 mr-2" />
-                  Schedule Deep Dive
+                  Schedule a Meet
                 </Link>
               </Button>
             </div>

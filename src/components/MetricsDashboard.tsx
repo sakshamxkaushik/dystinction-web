@@ -104,7 +104,7 @@ const MetricsDashboard = () => {
             </span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Our enterprise platforms deliver measurable results with transparent, 
             real-time monitoring across all critical infrastructure components.
           </p>
