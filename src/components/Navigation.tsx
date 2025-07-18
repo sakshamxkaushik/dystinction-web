@@ -27,7 +27,7 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-card backdrop-blur-md" : "bg-transparent"
+        isScrolled || isOpen ? "glass-card backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6">
@@ -40,7 +40,7 @@ const Navigation = () => {
             className="flex items-center"
           >
             <img
-              src="/images/logo.png"
+              src={isScrolled || isOpen || location.pathname === "/" ? "/images/logow.png" : "/images/logo.png"}
               alt="Dystinction Logo"
               className="h-16 md:h-16 w-auto object-contain"
             />
