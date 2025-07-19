@@ -59,7 +59,7 @@ const Hero = () => {
               <img
                 src="/images/puic.png"
                 alt="Punjab University Incubation Center"
-                className="h-22 sm:h-24 max-w-[120px] sm:max-w-[140px] min-w-[90px] object-contain hover:grayscale-0 transition duration-300"
+                className="h-22 sm:h-24 md:h-28 lg:h-32 max-w-[120px] sm:max-w-[140px] md:max-w-[180px] lg:max-w-[220px] min-w-[90px] object-contain hover:grayscale-0 transition duration-300"
               />
             </div>
 
@@ -68,7 +68,7 @@ const Hero = () => {
               <img
                 src="/images/pu.png"
                 alt="Punjab University"
-                className="h-22 sm:h-24 max-w-[120px] sm:max-w-[140px] min-w-[90px] object-contain hover:grayscale-0 transition duration-300"
+                className="h-22 sm:h-24 md:h-28 lg:h-32 max-w-[120px] sm:max-w-[140px] md:max-w-[180px] lg:max-w-[220px] min-w-[90px] object-contain hover:grayscale-0 transition duration-300"
               />
             </div>
           </div>
