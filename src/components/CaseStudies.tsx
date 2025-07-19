@@ -6,29 +6,29 @@ const caseStudies = [
   {
     icon: Truck,
     industry: "Manufacturing",
-    title: "Supply Chain Optimization",
-    challenge: "Manual tracking causing 15% inventory waste",
-    solution: "Real-time IoT monitoring with predictive analytics",
+    title: "Future of Supply Chain",
+    challenge: "Manual tracking and inefficiencies",
+    solution: "Exploring real-time IoT and predictive analytics",
     results: [
-      { metric: "78%", label: "Waste Reduction" },
-      { metric: "$2.3M", label: "Annual Savings" },
-      { metric: "99.2%", label: "Delivery Accuracy" }
+      { metric: "Goal", label: "Zero Inventory Waste" },
+      { metric: "Focus", label: "Cost Reduction" },
+      { metric: "Vision", label: "Automated Insights" }
     ],
-    tech: ["IoT Sensors", "Machine Learning", "Real-time Analytics"],
+    tech: ["IoT Sensors", "Machine Learning", "Predictive Analytics"],
     gradient: "from-blue-500 to-cyan-500"
   },
   {
     icon: Heart,
     industry: "Healthcare",
-    title: "Data Intelligence Suite",
-    challenge: "Patient data scattered across 12 systems",
-    solution: "Unified healthcare platform with HIPAA compliance",
+    title: "Next-Gen Data Intelligence",
+    challenge: "Disconnected patient records",
+    solution: "Developing unified data platforms",
     results: [
-      { metric: "67%", label: "Faster Diagnosis" },
-      { metric: "45%", label: "Cost Reduction" },
-      { metric: "99.99%", label: "System Uptime" }
+      { metric: "Goal", label: "Faster Diagnosis" },
+      { metric: "Focus", label: "Cost Efficiency" },
+      { metric: "Vision", label: "Seamless Integrations" }
     ],
-    tech: ["FHIR Integration", "AI Analytics", "Secure APIs"],
+    tech: ["AI Analytics", "FHIR APIs", "Data Security"],
     gradient: "from-green-500 to-emerald-500"
   },
   {
@@ -73,15 +73,14 @@ const CaseStudies = () => {
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Real Results for{" "}
+          Shaping the Future of{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Real Businesses
+            Enterprise Solutions
             </span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how enterprise leaders across industries have transformed their operations 
-            and achieved measurable competitive advantages with our solutions.
+          Discover how we aim to transform industries with forward-thinking strategies and cutting-edge technology.
           </p>
         </div>
 
@@ -166,7 +165,7 @@ const CaseStudies = () => {
         <div className="glass-card p-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">50+</div>
+              <div className="text-3xl font-bold text-primary">26+</div>
               <div className="text-muted-foreground">Enterprise Clients</div>
               <div className="text-xs text-green-400">↗ Across 12 industries</div>
             </div>

@@ -3,30 +3,30 @@ import { TrendingUp, Zap, Shield, Rocket } from "lucide-react";
 const benchmarks = [
   {
     icon: TrendingUp,
-    metric: "3946%",
+    metric: "25%",
     label: "Faster Throughput",
-    description: "vs. off-the-shelf solutions",
+    description: "vs. manual workflows",
     color: "text-green-400"
   },
   {
     icon: Rocket,
-    metric: "446x",
-    label: "Growth Without Degradation", 
-    description: "Performance maintained at scale",
+    metric: "5x",
+    label: "Prototype Iteration Speed", 
+    description: "Faster testing and feedback loops",
     color: "text-blue-400"
   },
   {
     icon: Shield,
-    metric: "46",
-    label: "Critical Incidents Prevented",
-    description: "Through proactive monitoring",
+    metric: "3",
+    label: "Key Bugs Prevented",
+    description: "In early product testing",
     color: "text-purple-400"
   },
   {
     icon: Zap,
-    metric: "4646%", 
-    label: "Auto Deployment Success",
-    description: "Zero-downtime releases",
+    metric: "100%", 
+    label: "Deployment Reliability",
+    description: "Stable updates so far",
     color: "text-yellow-400"
   }
 ];

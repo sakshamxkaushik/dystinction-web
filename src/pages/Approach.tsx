@@ -92,7 +92,7 @@ const differentiators = [
   {
     title: "Enterprise Experience",
     description: "Our team has built solutions for Fortune 500 companies across industries, bringing deep enterprise knowledge to every project.",
-    stat: "50+ Enterprise Clients"
+    stat: "26+ Enterprise Clients"
   },
   {
     title: "Proven Methodologies",

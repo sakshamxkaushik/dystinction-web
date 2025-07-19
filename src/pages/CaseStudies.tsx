@@ -249,7 +249,7 @@ const CaseStudiesPage = () => {
             </div>
 
             {/* Testimonial */}
-            <div className="glass-card p-8 bg-gradient-to-r from-primary/5 to-secondary/5">
+            {/* <div className="glass-card p-8 bg-gradient-to-r from-primary/5 to-secondary/5">
               <h2 className="text-2xl font-bold mb-6">Client Testimonial</h2>
               <blockquote className="text-lg text-muted-foreground italic mb-6">
                 "{caseStudy.testimonial.quote}"
@@ -258,7 +258,7 @@ const CaseStudiesPage = () => {
                 <div className="font-semibold text-foreground">{caseStudy.testimonial.author}</div>
                 <div className="text-sm text-muted-foreground">{caseStudy.testimonial.title}</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Sidebar */}
@@ -341,15 +341,14 @@ const CaseStudiesOverview = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Real Results for{" "}
+          Shaping the Future of {" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Real Businesses
+              Enterprise Solutions
             </span>
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how enterprise leaders across industries have transformed their operations 
-            and achieved measurable competitive advantages with our solutions.
+          Discover how we aim to transform industries with forward-thinking strategies and cutting-edge technology.
           </p>
         </div>
 
@@ -405,7 +404,7 @@ const CaseStudiesOverview = () => {
         <div className="glass-card p-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">50+</div>
+              <div className="text-3xl font-bold text-primary">26+</div>
               <div className="text-muted-foreground">Enterprise Clients</div>
               <div className="text-xs text-green-400">↗ Across 12 industries</div>
             </div>
