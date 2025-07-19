@@ -25,7 +25,7 @@ const BookConsultation = () => {
         </div>
 
         {/* Bento Grid Layout */}
-        <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 rounded-3xl bg-glass shadow-xl p-2">
+        <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 rounded-3xl p-2">
           {/* Calendly Widget */}
           <div className="lg:col-span-7 justify-center">
             <div className="glass-card justify-center">
