@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-2 sm:px-6 pt-20 sm:pt-24">
+    <section className="relative min-h-screen overflow-hidden overflow-x-hidden max-w-full px-2 sm:px-6 pt-20 sm:pt-24">
       {/* Background glow effects */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-90" />
-      <div className="absolute top-20 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-primary/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-1/4 w-56 h-56 sm:w-80 sm:h-80 bg-secondary/20 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-hero opacity-90 z-0" />
+      <div className="absolute top-20 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-primary/20 rounded-full blur-3xl z-0" />
+      <div className="absolute bottom-20 right-1/4 w-56 h-56 sm:w-80 sm:h-80 bg-secondary/20 rounded-full blur-3xl z-0" />
 
-      <div className="relative container mx-auto px-3 sm:px-6 text-center">
+      <div className="relative w-full max-w-5xl mx-auto px-3 sm:px-6 text-center z-10">
         {/* Trust indicators */}
         <div className="mb-6 sm:mb-8 flex justify-center">
           <div className="glass-card inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3">
@@ -74,9 +74,9 @@ const Hero = () => {
         </div>
 
         {/* Floating elements - hide on xs, show on sm+ */}
-        <div className="hidden sm:block absolute top-1/4 left-10 w-4 h-4 bg-primary/30 rounded-full blur-sm float" />
-        <div className="hidden sm:block absolute bottom-1/3 right-10 w-6 h-6 bg-secondary/30 rounded-full blur-sm float-delay" />
-        <div className="hidden sm:block absolute top-1/2 left-1/3 w-3 h-3 bg-primary/40 rounded-full blur-sm float" />
+        <div className="hidden sm:block absolute top-1/4 left-10 w-4 h-4 bg-primary/30 rounded-full blur-sm float z-0" />
+        <div className="hidden sm:block absolute bottom-1/3 right-10 w-6 h-6 bg-secondary/30 rounded-full blur-sm float-delay z-0" />
+        <div className="hidden sm:block absolute top-1/2 left-1/3 w-3 h-3 bg-primary/40 rounded-full blur-sm float z-0" />
       </div>
     </section>
   );

@@ -77,14 +77,14 @@ const MetricsDashboard = () => {
       value: "50K+",
       trend: "↗ +12%",
       delay: 800
-    },
-    {
-      icon: Zap,
-      label: "Deployments Today",
-      value: "24",
-      trend: "↗ +8",
-      delay: 1000
     }
+    // {
+    //   icon: Zap,
+    //   label: "Deployments Today",
+    //   value: "24",
+    //   trend: "↗ +8",
+    //   delay: 1000
+    // }
   ];
 
   return (
@@ -111,7 +111,7 @@ const MetricsDashboard = () => {
         </div>
 
         {/* Metrics grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
           {metrics.map((metric, index) => (
             <MetricCard key={index} {...metric} />
           ))}

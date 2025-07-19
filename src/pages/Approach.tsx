@@ -73,7 +73,7 @@ const methodology = [
     ]
   },
   {
-    phase: "Deployment",
+    phase: "ent",
     duration: "2-4 weeks",
     icon: Rocket,
     title: "Seamless Launch",
