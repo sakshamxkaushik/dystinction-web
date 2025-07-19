@@ -134,7 +134,7 @@ const Contact = () => {
                   <div>
                     <div className="font-medium mb-1">Office</div>
                     <div className="text-foreground">
-                      Zirakpur & Chandigarh, India
+                      RUSA, Panjab University, Sector 25, Chandigarh, India
                     </div>
                     <div className="text-sm text-muted-foreground mt-1">
                       Remote consultations available globally
@@ -145,9 +145,9 @@ const Contact = () => {
             </div>
 
             {/* Company tagline */}
-            <div className="glass-card p-6 bg-gradient-to-r from-primary/5 to-secondary/5">
+            <div className="glass-card p-11 bg-gradient-to-r from-primary/5 to-secondary/5">
               <div className="text-center">
-                <h4 className="font-bold text-xl mb-3 text-glow">
+                <h4 className="font-bold text-xl mb-4 text-glow">
                   Dystinction
                 </h4>
                 <p className="text-primary font-medium mb-2">
@@ -163,7 +163,7 @@ const Contact = () => {
         </div>
 
         {/* Bottom testimonial */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="glass-card p-8 max-w-4xl mx-auto">
             <div className="text-lg text-muted-foreground italic mb-4">
               "Dystinction didn't just build our platform—they transformed how our entire 
@@ -174,7 +174,7 @@ const Contact = () => {
               <span className="text-muted-foreground"> • CTO, Global Manufacturing Corp</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Background effects */}

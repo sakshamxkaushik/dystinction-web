@@ -1,5 +1,5 @@
 import { InlineWidget } from "react-calendly";
-import { Calendar, Clock, Users, CheckCircle, Mail, Phone } from "lucide-react";
+import { Calendar, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -13,31 +13,30 @@ const BookConsultation = () => {
             <Calendar className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">Free Consultation</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Schedule Your{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Strategy Call
             </span>
           </h1>
-          
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Get expert insights tailored to your enterprise challenges. Book a call with our team below.
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+        {/* Bento Grid Layout */}
+        <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 rounded-3xl bg-glass shadow-xl p-2">
           {/* Calendly Widget */}
-          <div className="lg:col-span-2">
-            <div className="glass-card p-6">
+          <div className="lg:col-span-7 justify-center">
+            <div className="glass-card justify-center">
               <InlineWidget url="https://calendly.com/dystinction/consultation-dystinction" />
             </div>
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-8">
+          <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
             {/* What to Expect */}
-            <div className="glass-card p-6">
+            <div className="glass-card border border-primary/30 shadow-md p-6">
               <h3 className="font-bold text-lg mb-4">What to Expect</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -62,7 +61,7 @@ const BookConsultation = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="glass-card p-6">
+            <div className="glass-card border border-secondary/30 shadow-md p-6">
               <h3 className="font-bold text-lg mb-4">Prefer to Call?</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
