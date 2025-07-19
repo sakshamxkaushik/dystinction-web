@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Calendar, ArrowRight } from "lucide-react";
 import { Layers, Database, Cloud, Zap } from "lucide-react";
+import { Cover } from "@/components/ui/cover";
 
 const servicesData = {
   "platform-engineering": {
@@ -253,7 +254,8 @@ const ServicesOverview = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Services</span>
+            Our  
+            <Cover>Services</Cover>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive enterprise solutions designed to transform your operations and drive competitive advantage.

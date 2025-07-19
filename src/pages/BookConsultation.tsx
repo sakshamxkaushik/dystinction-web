@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Calendar, Phone, Mail, ExternalLink, Clock, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Cover } from "@/components/ui/cover";
 
 const BookConsultation = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -33,9 +34,9 @@ const BookConsultation = () => {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Schedule Your{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Strategy Call
-            </span>
+            {/* <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> */}
+              <Cover className="">Strategy Call</Cover>
+            {/* </span> */}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Get expert insights tailored to your enterprise challenges. Book a call with our team below.

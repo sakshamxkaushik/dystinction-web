@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
+import { GlowingStarsBackgroundCard } from "./ui/glowing-stars";
 
 const Hero = () => {
   return (
-    <section className="overflow-hidden overflow-x-hidden w-full max-w-5xl mx-auto px-2 sm:px-6 pt-20 sm:pt-28 lg:pt-32 pb-10 lg:pb-20 flex flex-col justify-center">
+    <section className="w-full max-w-8xl xl:max-w-8xl mx-auto px-4 sm:px-10 lg:px-12">
       {/* Background glow effects */}
       <div className="absolute inset-0 bg-gradient-hero opacity-90 z-0" />
       <div className="absolute top-20 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-primary/20 rounded-full blur-3xl z-0" />
@@ -49,36 +50,34 @@ const Hero = () => {
         </div>
 
         {/* Incubator logos - larger on mobile, centered, more vertical space */}
-        <div className="glass-card w-full max-w-xs xs:max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto p-4 sm:p-6 rounded-2xl mt-2 sm:mt-4">
-          <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-4 text-center">
-            We're incubated by
-          </p>
-          <div className="flex items-center justify-center gap-6 sm:gap-10 flex-wrap">
-            {/* Logo 1 */}
-            <div className="flex items-center min-w-[90px]">
+        <GlowingStarsBackgroundCard className="relative bg-glass w-full max-w-xs xs:max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl rounded-2xl mt-2 sm:mt-4 overflow-hidden">
+          {/* Overlay content */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center h-full z-10 pointer-events-none">
+            <p className="text-xs sm:text-sm  font-semibold text-muted-foreground mb-2 text-center">
+              We're incubated by
+            </p>
+            <div className="flex flex-row items-center justify-center gap-8 sm:gap-12 mt-2">
               <img
                 src="/images/puic.png"
                 alt="Punjab University Incubation Center"
-                className="h-22 sm:h-24 md:h-28 lg:h-32 max-w-[120px] sm:max-w-[140px] md:max-w-[180px] lg:max-w-[220px] min-w-[90px] object-contain hover:grayscale-0 transition duration-300"
+                className="h-22 sm:h-24 md:h-28 lg:h-32 max-w-[120px] sm:max-w-[140px] md:max-w-[180px] lg:max-w-[220px] min-w-[90px] object-contain "
               />
-            </div>
-
-            {/* Logo 2 */}
-            <div className="flex items-center min-w-[90px]">
+              <div className="hidden sm:block w-px h-16 bg-glass mx-4"></div>
               <img
                 src="/images/pu.png"
                 alt="Punjab University"
-                className="h-22 sm:h-24 md:h-28 lg:h-32 max-w-[120px] sm:max-w-[140px] md:max-w-[180px] lg:max-w-[220px] min-w-[90px] object-contain hover:grayscale-0 transition duration-300"
+                className="h-22 sm:h-24 md:h-28 lg:h-32 max-w-[120px] sm:max-w-[140px] md:max-w-[180px] lg:max-w-[220px] min-w-[90px] object-contain "
               />
             </div>
           </div>
-        </div>
-
+          {/* The stars background will remain as the base layer */}
+        </GlowingStarsBackgroundCard>
         {/* Floating elements - hide on xs, show on sm+ */}
         <div className="hidden sm:block absolute top-1/4 left-10 w-4 h-4 bg-primary/30 rounded-full blur-sm float z-0" />
         <div className="hidden sm:block absolute bottom-1/3 right-10 w-6 h-6 bg-secondary/30 rounded-full blur-sm float-delay z-0" />
         <div className="hidden sm:block absolute top-1/2 left-1/3 w-3 h-3 bg-primary/40 rounded-full blur-sm float z-0" />
       </div>
+      
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Activity, Clock, Database, Users, Zap } from "lucide-react";
+import { Cover } from "./ui/cover";
 
 interface MetricCardProps {
   icon: React.ElementType;
@@ -99,9 +100,9 @@ const MetricsDashboard = () => {
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Real-Time Platform{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Performance
-            </span>
+            {/* <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> */}
+              <Cover> Performance</Cover>
+            {/* </span> */}
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">

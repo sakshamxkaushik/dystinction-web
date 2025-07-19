@@ -1,4 +1,5 @@
 import { TrendingUp, Zap, Shield, Rocket } from "lucide-react";
+import { Cover } from "@/components/ui/cover";
 
 const benchmarks = [
   {
@@ -44,9 +45,7 @@ const PerformanceBenchmarks = () => {
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Enterprise-Grade{" "}
-            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-              Performance
-            </span>
+            <Cover className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Performance</Cover>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

@@ -10,6 +10,7 @@ import CaseStudies from "./pages/CaseStudies";
 import BookConsultation from "./pages/BookConsultation";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
+import Footer from "@/components/ui/Footer";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
