@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 import Footer from "@/components/ui/Footer";
 import { HelmetProvider } from 'react-helmet-async';
+import Chatbot from "./components/Chatbot";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Chatbot />
           <Footer />
         </BrowserRouter>
       </TooltipProvider>

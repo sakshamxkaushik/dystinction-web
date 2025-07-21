@@ -286,3 +286,21 @@
     box-shadow: 0 0 50px hsl(var(--primary) / 0.6), 0 0 80px hsl(var(--secondary) / 0.3);
   }
 }
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.6s cubic-bezier(0.4,0,0.2,1) both;
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s cubic-bezier(0.4,0,0.2,1) both;
+  }
+}
