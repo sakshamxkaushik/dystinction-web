@@ -57,6 +57,7 @@ type Message = {
 
 const Chatbot = () => {
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       from: "bot",
@@ -107,10 +108,22 @@ const Chatbot = () => {
     { icon: Shield, text: "Security", query: "Do you offer cybersecurity services?" }
   ];
 
-  if (!open) {
+  const handleOpen = () => {
+    setOpen(true);
+    setClosing(false);
+  };
+  const handleClose = () => {
+    setClosing(true);
+    setTimeout(() => {
+      setOpen(false);
+      setClosing(false);
+    }, 400); // match animation duration
+  };
+
+  if (!open && !closing) {
     return (
       <button
-        onClick={() => setOpen(true)}
+        onClick={handleOpen}
         className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
         aria-label="Open chatbot"
       >
@@ -120,7 +133,7 @@ const Chatbot = () => {
   }
 
   return (
-    <div className="fixed bottom-0 right-0 w-full sm:bottom-6 sm:right-6 sm:w-96 bg-white dark:bg-neutral-900 rounded-none sm:rounded-2xl shadow-2xl border border-gray-200 dark:border-neutral-800 z-50 overflow-hidden animate-fade-in-up transition-all duration-500">
+    <div className={`fixed bottom-0 right-0 w-full sm:bottom-6 sm:right-6 sm:w-96 bg-white dark:bg-neutral-900 rounded-none sm:rounded-2xl shadow-2xl border border-gray-200 dark:border-neutral-800 z-50 overflow-hidden transition-all duration-500 animate-fade-in-up ${closing ? 'animate-fade-out-down' : ''}`}>
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
@@ -133,7 +146,7 @@ const Chatbot = () => {
           </div>
         </div>
         <button
-          onClick={() => setOpen(false)}
+          onClick={handleClose}
           className="text-white hover:bg-white hover:bg-opacity-20 rounded-full p-1 transition-colors"
           aria-label="Close chatbot"
         >
@@ -144,7 +157,7 @@ const Chatbot = () => {
       <div className="h-80 overflow-y-auto p-4 bg-gray-50 dark:bg-neutral-800">
         {messages.length === 1 && (
           <div className="mb-4">
-            <p className="text-sm text-gray-600 mb-3">Quick questions:</p>
+            <p className="text-sm text-gray-600 dark:text-gray-200 mb-3">Quick questions:</p>
             <div className="grid grid-cols-2 gap-2">
               {quickActions.map((action, i) => (
                 <button
@@ -153,10 +166,10 @@ const Chatbot = () => {
                     setInput(action.query);
                     setTimeout(() => sendMessage(), 100);
                   }}
-                  className="flex items-center space-x-2 p-2 bg-white rounded-lg border hover:bg-blue-50 hover:border-blue-200 transition-colors text-xs"
+                  className="flex items-center space-x-2 p-2 bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-700 hover:bg-blue-50 hover:dark:bg-neutral-700 hover:border-blue-200 hover:dark:border-blue-400 transition-colors text-xs"
                 >
                   <action.icon className="w-3 h-3 text-blue-600" />
-                  <span className="text-gray-700">{action.text}</span>
+                  <span className="text-gray-700 dark:text-gray-100">{action.text}</span>
                 </button>
               ))}
             </div>
