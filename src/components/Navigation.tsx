@@ -7,6 +7,7 @@ import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [theme, setTheme] = useState("dark");
   const location = useLocation();
 
   useEffect(() => {
@@ -15,6 +16,19 @@ const Navigation = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Listen for theme changes
+    const observer = new MutationObserver(() => {
+      if (document.body.classList.contains("light")) setTheme("light");
+      else setTheme("dark");
+    });
+    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+    // Set initial theme
+    if (document.body.classList.contains("light")) setTheme("light");
+    else setTheme("dark");
+    return () => observer.disconnect();
   }, []);
 
   const navItems = [
@@ -38,14 +52,14 @@ const Navigation = () => {
           <Link
             to="/"
             onClick={(e) => {
-              if (location.pathname === "/") e.preventDefault(); // Prevents scroll reset if already on home
+              if (location.pathname === "/") e.preventDefault();
             }}
             className="flex items-center"
           >
             <img
-              src={isScrolled || isOpen || location.pathname === "/" ? "/images/logo.png" : "/images/logo.png"}
+              src={theme === "light" ? "/images/logo-dark.png" : "/images/logo-light.png"}
               alt="Dystinction Logo"
-              className="h-10 w-auto object-contain sm:h-16 transition-all duration-200"
+              className="h-14 w-auto object-contain sm:h-20 transition-all duration-200"
             />
           </Link>
 
@@ -53,7 +67,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
-
+                key={item.name}
                 to={item.href}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
                   location.pathname === item.href
@@ -76,15 +90,17 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Theme Switcher */}
-          <div className="hidden md:flex items-center space-x-2">
+          {/* Theme Switcher - desktop only */}
+          <div className="hidden md:flex items-center space-x-2 ml-2">
             <ThemeSwitcher />
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-white hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+            className="md:hidden p-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+            style={{ color: theme === "light" ? "#1a1a1a" : "#fff" }}
+            aria-label="Open menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -114,6 +130,10 @@ const Navigation = () => {
                   Schedule a Meet
                 </Link>
               </Button>
+              {/* Theme Switcher in mobile menu */}
+              <div className="flex items-center justify-start mt-2">
+                <ThemeSwitcher />
+              </div>
             </div>
           </div>
         )}
