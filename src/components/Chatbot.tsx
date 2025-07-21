@@ -120,7 +120,7 @@ const Chatbot = () => {
   }
 
   return (
-    <div className="fixed bottom-0 right-0 w-full sm:bottom-6 sm:right-6 sm:w-96 bg-white rounded-none sm:rounded-2xl shadow-2xl border border-gray-200 z-50 overflow-hidden animate-fade-in-up transition-all duration-500">
+    <div className="fixed bottom-0 right-0 w-full sm:bottom-6 sm:right-6 sm:w-96 bg-white dark:bg-neutral-900 rounded-none sm:rounded-2xl shadow-2xl border border-gray-200 dark:border-neutral-800 z-50 overflow-hidden animate-fade-in-up transition-all duration-500">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
@@ -141,7 +141,7 @@ const Chatbot = () => {
         </button>
       </div>
       {/* Messages */}
-      <div className="h-80 overflow-y-auto p-4 bg-gray-50">
+      <div className="h-80 overflow-y-auto p-4 bg-gray-50 dark:bg-neutral-800">
         {messages.length === 1 && (
           <div className="mb-4">
             <p className="text-sm text-gray-600 mb-3">Quick questions:</p>
@@ -166,8 +166,8 @@ const Chatbot = () => {
           <div key={i} className={`flex mb-3 ${msg.from === "user" ? "justify-end" : "justify-start"}`}>
             <div className={`max-w-xs px-4 py-2 rounded-2xl ${
               msg.from === "user"
-                ? "bg-blue-600 text-white rounded-br-sm"
-                : "bg-white text-gray-800 shadow-sm border rounded-bl-sm"
+                ? "bg-blue-600 text-white rounded-br-sm dark:bg-blue-500 dark:text-white"
+                : "bg-white text-gray-800 shadow-sm border rounded-bl-sm dark:bg-neutral-900 dark:text-gray-100 dark:border-neutral-700"
             }`}>
               <p className="text-sm leading-relaxed">{msg.text}</p>
               {msg.category && msg.category !== "Fallback" && (
@@ -190,25 +190,25 @@ const Chatbot = () => {
         <div ref={messagesEndRef} />
       </div>
       {/* Input */}
-      <div className="p-4 bg-white border-t">
+      <div className="p-4 bg-white border-t dark:bg-neutral-900 dark:border-neutral-800">
         <div className="flex space-x-2">
           <input
             value={input}
             onChange={e => setInput(e.target.value)}
             onKeyDown={e => e.key === "Enter" && !e.shiftKey && sendMessage()}
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="flex-1 px-3 py-2 border border-gray-300 dark:border-neutral-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm bg-white dark:bg-neutral-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400"
             placeholder="Ask about our services, technology, or company..."
             disabled={isTyping}
           />
           <button
             onClick={sendMessage}
             disabled={!input.trim() || isTyping}
-            className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white p-2 rounded-lg transition-colors"
+            className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white p-2 rounded-lg transition-colors dark:bg-blue-500 dark:hover:bg-blue-600 dark:disabled:bg-neutral-700"
           >
             <Send className="w-4 h-4" />
           </button>
         </div>
-        <p className="text-xs text-gray-500 mt-2 text-center">
+        <p className="text-xs text-gray-500 mt-2 text-center dark:text-gray-400">
           Powered by Dystinction Technologies
         </p>
       </div>
