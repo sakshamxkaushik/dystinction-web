@@ -63,6 +63,7 @@
     /* Animation Timing */
     --transition-liquid: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-glass: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-theme: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Glass Shadows */
     --shadow-glass: 0 8px 32px hsl(240 23% 9% / 0.4), 0 4px 16px hsl(271 81% 56% / 0.1);
@@ -78,6 +79,76 @@
     --foreground: 0 0% 98%;
     --glass: 240 22% 10%;
     --card: 240 22% 8%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 240 23% 9%;
+    --glass: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 23% 9%;
+    --glass-foreground: 240 23% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 23% 9%;
+    --primary: 271 81% 56%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 316 73% 52%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 15% 90%;
+    --muted-foreground: 240 23% 30%;
+    --accent: 240 15% 95%;
+    --accent-foreground: 240 23% 20%;
+    --border: 240 15% 85%;
+    --input: 240 15% 90%;
+    --glass-border: 240 15% 85%;
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 98%), hsl(0 0% 100%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.8), hsl(0 0% 98% / 0.6));
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.1), 0 4px 16px hsl(271 81% 56% / 0.1);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.1);
+  }
+
+  .christmas {
+    --background: 220 40% 98%;
+    --foreground: 220 40% 10%;
+    --glass: 220 40% 100%;
+    --card: 220 40% 100%;
+    --card-foreground: 220 40% 10%;
+    --primary: 0 80% 50%;  /* Christmas Red */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 140 80% 30%;  /* Christmas Green */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 40% 90%;
+    --muted-foreground: 220 40% 30%;
+    --accent: 220 40% 95%;
+    --accent-foreground: 220 40% 20%;
+    --border: 220 40% 85%;
+    --input: 220 40% 90%;
+    --glass-border: 220 40% 85%;
+    --gradient-hero: linear-gradient(180deg, hsl(220 40% 98%), hsl(0 80% 50% / 0.1));
+    --gradient-primary: linear-gradient(135deg, hsl(0 80% 50% / 0.8), hsl(140 80% 30% / 0.6));
+    --gradient-glass: linear-gradient(135deg, hsl(220 40% 100% / 0.8), hsl(220 40% 98% / 0.6));
+  }
+
+  .diwali {
+    --background: 45 100% 98%;
+    --foreground: 45 100% 10%;
+    --glass: 45 100% 100%;
+    --card: 45 100% 100%;
+    --card-foreground: 45 100% 10%;
+    --primary: 35 90% 50%;  /* Diwali Orange */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 291 90% 50%;  /* Diwali Purple */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 45 100% 90%;
+    --muted-foreground: 45 100% 30%;
+    --accent: 45 100% 95%;
+    --accent-foreground: 45 100% 20%;
+    --border: 45 100% 85%;
+    --input: 45 100% 90%;
+    --glass-border: 45 100% 85%;
+    --gradient-hero: linear-gradient(180deg, hsl(45 100% 98%), hsl(35 90% 50% / 0.1));
+    --gradient-primary: linear-gradient(135deg, hsl(35 90% 50% / 0.8), hsl(291 90% 50% / 0.6));
+    --gradient-glass: linear-gradient(135deg, hsl(45 100% 100% / 0.8), hsl(45 100% 98% / 0.6));
   }
 }
 

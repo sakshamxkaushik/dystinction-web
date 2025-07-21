@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,6 +74,11 @@ const Navigation = () => {
                 Schedule a Meet
               </Link>
             </Button>
+          </div>
+
+          {/* Theme Switcher */}
+          <div className="hidden md:flex items-center space-x-2">
+            <ThemeSwitcher />
           </div>
 
           {/* Mobile menu button */}
