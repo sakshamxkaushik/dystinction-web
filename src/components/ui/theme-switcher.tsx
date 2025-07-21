@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 type Theme = "dark" | "light";
 
 export function ThemeSwitcher() {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     // On mount, read the theme from localStorage or system preference
     const savedTheme = localStorage.getItem("theme") as Theme | null;
-    let initialTheme: Theme = "dark";
+    let initialTheme: Theme = "light";
     if (savedTheme === "light" || savedTheme === "dark") {
       initialTheme = savedTheme;
     } else {
