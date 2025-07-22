@@ -13,6 +13,8 @@ import Navigation from "./components/Navigation";
 import Footer from "@/components/ui/Footer";
 import { HelmetProvider } from 'react-helmet-async';
 import Chatbot from "./components/Chatbot";
+import React from "react";
+
 
 const queryClient = new QueryClient();
 
