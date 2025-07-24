@@ -10,7 +10,7 @@ interface HeroProps {
 
 const Hero = ({ isVisible = true }: HeroProps) => {
   return (
-    <section className="w-full max-w-8xl xl:max-w-8xl mx-auto px-4 sm:px-10 lg:px-12 relative">
+   <section className="w-full max-w-8xl xl:max-w-8xl mx-auto px-4 sm:px-10 lg:px-12 relative pb-20">
       {/* Background glow effects */}
       <div className="absolute inset-0 bg-gradient-hero opacity-90 z-0" />
       <div className="absolute top-36 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-primary/20 rounded-full blur-3xl z-0" />
@@ -88,6 +88,7 @@ const Hero = ({ isVisible = true }: HeroProps) => {
             <Link to="/approach">How It Works</Link>
           </Button>
         </div>
+        
         {/* Incubator logos */}
         <GlowingStarsBackgroundCard
           className={`relative bg-glass w-full max-w-xs xs:max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl rounded-2xl mt-2 sm:mt-4 overflow-hidden transition-all duration-500 delay-400 ${
@@ -95,7 +96,7 @@ const Hero = ({ isVisible = true }: HeroProps) => {
           }`}
         >
           {/* Overlay content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center h-full z-10 pointer-events-none">
+          <div className="absolute inset-0 flex flex-col items-center justify-center h-full z-10  pointer-events-none">
             <p className="text-xs sm:text-sm font-semibold text-muted-foreground mb-2 text-center">
               Institutional Partners
             </p>
@@ -126,7 +127,7 @@ const Hero = ({ isVisible = true }: HeroProps) => {
           }`}
         />
         <div
-          className={`hidden sm:block absolute top-1/2 left-1/3 w-3 h-3 bg-primary/40 rounded-full blur-sm float z-0 transition-opacity duration-500 delay-700 ${
+          className={`hidden sm:block absolute top-1/2 left-1/3 w-3 h-3 bg-primary/40 rounded-full blur-sm float z-0 transition-opacity duration-500 delay-700  ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         />
