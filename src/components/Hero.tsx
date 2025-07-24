@@ -24,26 +24,34 @@ const Hero = () => {
 
         {/* Main headline & subheadline */}
         <div className="flex flex-col items-center space-y-4 md:space-y-6 lg:space-y-8">
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-glow leading-tight max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto">
-            B2B Toh Ab {" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Tech-Enabled Hoga!
-            </span>
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto">
+            B2B ab{" "}
+            <span className="text-highlight">Tech-Enabled Hoga!</span>
           </h1>
           <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed">
-            Even chaos experts can manage procurement like pros.
+            Solving industrial procurement gaps with smart, scalable tech.
           </p>
         </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-xs sm:max-w-none mx-auto mb-8 md:mb-12 lg:mb-16">
-          <Button variant="liquid" size="lg" className="group w-full sm:w-auto" asChild>
+          <Button
+            variant="liquid"
+            size="lg"
+            className="group w-full sm:w-auto"
+            asChild
+          >
             <Link to="/book-consultation">
               Talk to Our Experts
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
-          <Button variant="glass" size="lg" className="w-full sm:w-auto" asChild>
+          <Button
+            variant="glass"
+            size="lg"
+            className="w-full sm:w-auto"
+            asChild
+          >
             <Link to="/approach">How It Works</Link>
           </Button>
         </div>
@@ -76,7 +84,6 @@ const Hero = () => {
         <div className="hidden sm:block absolute bottom-1/3 right-10 w-6 h-6 bg-secondary/30 rounded-full blur-sm float-delay z-0" />
         <div className="hidden sm:block absolute top-1/2 left-1/3 w-3 h-3 bg-primary/40 rounded-full blur-sm float z-0" />
       </div>
-      
     </section>
   );
 };
