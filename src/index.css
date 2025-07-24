@@ -119,10 +119,11 @@
 
   .light {
     --background: 182 30% 97%;                 /* Baby Blue tint - #e4f4f3 inspired */
-    --foreground: 222 28% 8%;
-    --glass: 197 60% 95%;                      /* Light Aquamarine glass */
-    --card: 197 60% 98%;                       /* Even lighter cards */
-    --card-foreground: 222 28% 8%;
+    --foreground: 222 35% 8%; 
+    --glass: 197 60% 94%; 
+    --card: 197 60% 97%; 
+    --card-foreground: 222 35% 8%;
+    --text-glow: 0 0 10px hsl(var(--primary) / 0.4);
     --glass-foreground: 222 28% 8%;
     --popover: 197 60% 98%;
     --popover-foreground: 222 28% 8%;
@@ -821,4 +822,231 @@
     --glass-opacity: 0.9;
     --glass-border: 0 0% 50%;
   }
+}
+
+/* Add these enhanced animations to your index.css file */
+
+/* Loading progress bar animation - faster */
+@keyframes loading-progress {
+  0% {
+    width: 0%;
+    transform: translateX(-100%);
+  }
+  60% {
+    width: 70%;
+    transform: translateX(-15%);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(0%);
+  }
+}
+
+/* Enhanced pulse glow for loading screen */
+@keyframes pulse-glow-loading {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+/* Text glow animation for loading screen */
+@keyframes text-glow-loading {
+  0%, 100% {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+  }
+  50% {
+    text-shadow: 
+      0 0 20px hsl(var(--primary) / 0.8),
+      0 0 40px hsl(var(--primary) / 0.6),
+      0 0 60px hsl(var(--primary) / 0.4);
+  }
+}
+
+/* Seamless text position transition */
+@keyframes title-position-transition {
+  0% {
+    font-size: clamp(1.5rem, 8vw, 5rem); /* Loading screen size */
+    transform: translateY(0);
+  }
+  100% {
+    font-size: clamp(1.875rem, 10vw, 7rem); /* Hero section size */
+    transform: translateY(2rem);
+  }
+}
+
+/* Enhanced float animation with more subtle movement */
+@keyframes float-gentle {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  33% { 
+    transform: translateY(-8px) rotate(0.5deg); 
+  }
+  66% { 
+    transform: translateY(-4px) rotate(-0.5deg); 
+  }
+}
+
+/* Sparkles fade transition */
+@keyframes sparkles-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Background gradient shift for seamless transition */
+@keyframes gradient-shift-transition {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Utility classes */
+.animate-loading-progress {
+  animation: loading-progress 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-pulse-glow-loading {
+  animation: pulse-glow-loading 2s ease-in-out infinite;
+}
+
+.animate-text-glow-loading {
+  animation: text-glow-loading 2s ease-in-out infinite;
+}
+
+.animate-title-transition {
+  animation: title-position-transition 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-sparkles-fade-in {
+  animation: sparkles-fade-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift-transition 6s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Critical: Prevent layout shift and footer flash */
+body {
+  overflow-x: hidden;
+  /* Prevent scroll during loading */
+}
+
+body.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Ensure content stays hidden until ready */
+.content-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.content-container.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Loading screen positioning */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Enhanced transitions for better performance */
+.transition-smooth {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-smooth-slow {
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-loading-progress,
+  .animate-pulse-glow-loading,
+  .animate-text-glow-loading,
+  .animate-title-transition,
+  .animate-float-gentle,
+  .animate-sparkles-fade-in,
+  .animate-gradient-shift {
+    animation: none !important;
+  }
+  
+  .transition-smooth,
+  .transition-smooth-slow {
+    transition: none !important;
+  }
+}
+
+/* Focus and hover states for better accessibility */
+.focus-visible:focus {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* Loading screen specific styles */
+.loading-screen-title {
+  transform-origin: center;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loading-screen-exit {
+  transform: translateY(-20px) scale(0.95);
+  opacity: 0;
+  filter: blur(4px);
+}
+
+/* Hero section specific styles */
+.hero-title-enter {
+  transform: translateY(20px) scale(1.05);
+  opacity: 0;
+  filter: blur(2px);
+}
+
+.hero-title-active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  filter: blur(0);
 }

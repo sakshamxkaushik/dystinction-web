@@ -1,6 +1,5 @@
 "use client";
-import React, { useId, useMemo } from "react";
-import { useEffect, useState } from "react";
+import React, { useId, useMemo, useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, SingleOrMultiple } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
@@ -18,6 +17,7 @@ type ParticlesProps = {
   particleColor?: string;
   particleDensity?: number;
 };
+
 export const SparklesCore = (props: ParticlesProps) => {
   const {
     id,
@@ -29,7 +29,43 @@ export const SparklesCore = (props: ParticlesProps) => {
     particleColor,
     particleDensity,
   } = props;
+  
   const [init, setInit] = useState(false);
+  const [theme, setTheme] = useState('dark');
+  
+  // Detect theme changes
+  useEffect(() => {
+    const detectTheme = () => {
+      const htmlClasses = document.documentElement.classList;
+      if (htmlClasses.contains('light')) {
+        setTheme('light');
+      } else if (htmlClasses.contains('dark')) {
+        setTheme('dark');
+      } else {
+        // Default based on system preference
+        setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+    };
+
+    detectTheme();
+    
+    // Watch for theme changes
+    const observer = new MutationObserver(detectTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    // Listen for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    mediaQuery.addEventListener('change', detectTheme);
+
+    return () => {
+      observer.disconnect();
+      mediaQuery.removeEventListener('change', detectTheme);
+    };
+  }, []);
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -37,6 +73,7 @@ export const SparklesCore = (props: ParticlesProps) => {
       setInit(true);
     });
   }, []);
+
   const controls = useAnimation();
 
   const particlesLoaded = async (container?: Container) => {
@@ -50,7 +87,32 @@ export const SparklesCore = (props: ParticlesProps) => {
     }
   };
 
+  // Dynamic particle colors based on theme
+  const getParticleColors = () => {
+    if (particleColor) return [particleColor];
+    
+    if (theme === 'light') {
+      return [
+        "#00b6bc", // primary
+        "#1a5f63", // darker primary
+        "#71d5e4", // secondary
+        "#4a9ba8", // darker secondary
+        "#0891b2", // complementary blue
+      ];
+    } else {
+      return [
+        "#ffffff",
+        "#00b6bc", // primary
+        "#71d5e4", // secondary
+        "#a1dbf1", // tertiary
+        "#9333ea", // accent purple
+      ];
+    }
+  };
+
   const generatedId = useId();
+  const particleColors = getParticleColors();
+
   return (
     <motion.div animate={controls} className={cn("opacity-0", className)}>
       {init && (
@@ -61,14 +123,13 @@ export const SparklesCore = (props: ParticlesProps) => {
           options={{
             background: {
               color: {
-                value: background || "#0d47a1",
+                value: background || "transparent",
               },
             },
             fullScreen: {
               enable: false,
               zIndex: 1,
             },
-
             fpsLimit: 120,
             interactivity: {
               events: {
@@ -77,14 +138,19 @@ export const SparklesCore = (props: ParticlesProps) => {
                   mode: "push",
                 },
                 onHover: {
-                  enable: false,
-                  mode: "repulse",
+                  enable: true,
+                  mode: "attract",
                 },
                 resize: true as any,
               },
               modes: {
                 push: {
                   quantity: 4,
+                },
+                attract: {
+                  distance: 100,
+                  duration: 0.4,
+                  factor: 2,
                 },
                 repulse: {
                   distance: 200,
@@ -122,15 +188,15 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
               },
               color: {
-                value: particleColor || "#ffffff",
+                value: particleColors,
                 animation: {
                   h: {
                     count: 0,
-                    enable: false,
+                    enable: true,
                     speed: 1,
                     decay: 0,
                     delay: 0,
-                    sync: true,
+                    sync: false,
                     offset: 0,
                   },
                   s: {
@@ -205,7 +271,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 size: false,
                 speed: {
                   min: 0.1,
-                  max: 1,
+                  max: theme === 'light' ? 2 : 1, // Slightly faster in light mode for better visibility
                 },
                 spin: {
                   acceleration: 0,
@@ -230,12 +296,12 @@ export const SparklesCore = (props: ParticlesProps) => {
                   mode: "delete",
                   value: 0,
                 },
-                value: particleDensity || 120,
+                value: particleDensity || (theme === 'light' ? 150 : 120), // More particles in light mode
               },
               opacity: {
                 value: {
-                  min: 0.1,
-                  max: 1,
+                  min: theme === 'light' ? 0.3 : 0.1, // Higher opacity in light mode
+                  max: theme === 'light' ? 0.9 : 1,
                 },
                 animation: {
                   count: 0,
@@ -251,14 +317,14 @@ export const SparklesCore = (props: ParticlesProps) => {
               },
               reduceDuplicates: false,
               shadow: {
-                blur: 0,
+                blur: theme === 'light' ? 2 : 0, // Add subtle shadow in light mode
                 color: {
-                  value: "#000",
+                  value: theme === 'light' ? "#00b6bc" : "#000",
                 },
-                enable: false,
+                enable: theme === 'light',
                 offset: {
-                  x: 0,
-                  y: 0,
+                  x: 1,
+                  y: 1,
                 },
               },
               shape: {
@@ -269,13 +335,13 @@ export const SparklesCore = (props: ParticlesProps) => {
               },
               size: {
                 value: {
-                  min: minSize || 1,
-                  max: maxSize || 3,
+                  min: minSize || (theme === 'light' ? 1.5 : 1), // Larger particles in light mode
+                  max: maxSize || (theme === 'light' ? 4 : 3),
                 },
                 animation: {
                   count: 0,
-                  enable: false,
-                  speed: 5,
+                  enable: true, // Enable size animation for more visibility
+                  speed: 2,
                   decay: 0,
                   delay: 0,
                   sync: false,
@@ -285,7 +351,10 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
               },
               stroke: {
-                width: 0,
+                width: theme === 'light' ? 0.5 : 0, // Add subtle stroke in light mode
+                color: {
+                  value: "#00b6bc",
+                },
               },
               zIndex: {
                 value: 0,
@@ -336,14 +405,14 @@ export const SparklesCore = (props: ParticlesProps) => {
               },
               twinkle: {
                 lines: {
-                  enable: false,
-                  frequency: 0.05,
-                  opacity: 1,
+                  enable: theme === 'light', // Enable twinkling in light mode
+                  frequency: 0.1,
+                  opacity: 0.8,
                 },
                 particles: {
-                  enable: false,
-                  frequency: 0.05,
-                  opacity: 1,
+                  enable: theme === 'light',
+                  frequency: 0.1,
+                  opacity: 0.8,
                 },
               },
               wobble: {
@@ -395,13 +464,13 @@ export const SparklesCore = (props: ParticlesProps) => {
               links: {
                 blink: false,
                 color: {
-                  value: "#fff",
+                  value: theme === 'light' ? "#00b6bc" : "#fff",
                 },
                 consent: false,
                 distance: 100,
                 enable: false,
                 frequency: 1,
-                opacity: 1,
+                opacity: theme === 'light' ? 0.3 : 1,
                 shadow: {
                   blur: 5,
                   color: {
