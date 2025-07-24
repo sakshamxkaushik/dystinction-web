@@ -25,13 +25,13 @@ const Hero = () => {
         {/* Main headline & subheadline */}
         <div className="flex flex-col items-center space-y-4 md:space-y-6 lg:space-y-8">
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-glow leading-tight max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto">
-            Procurement, Bharat Ki Business ,{" "}
+            B2B Toh Ab {" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Speed Pe.
+              Tech-Enabled Hoga!
             </span>
           </h1>
           <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed">
-            Simplifying buying, vendor management, and business sourcing—purpose-built for India’s scale and ambitions.
+            Even chaos experts can manage procurement like pros.
           </p>
         </div>
 

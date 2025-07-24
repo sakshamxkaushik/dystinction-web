@@ -5,109 +5,106 @@ import { Link } from "react-router-dom";
 const values = [
   {
     icon: Target,
-    title: "Results-Driven",
-    description: "Every solution is measured against real business outcomes. We don't just deliver software—we deliver competitive advantages.",
+    title: "Outcomes Over Outputs",
+    description: "Every engagement is measured by real business results: better procurement, faster cycles, and true ROI. We go beyond delivery—we drive your success.",
     color: "text-blue-400"
   },
   {
     icon: Users,
-    title: "Partnership Approach",
-    description: "We become an extension of your team, working closely with stakeholders to understand your unique challenges and goals.",
+    title: "True Partnership",
+    description: "We work as a real extension of your procurement and ops team, proactive in solving your unique challenges and unlocking opportunity.",
     color: "text-green-400"
   },
   {
     icon: Shield,
-    title: "Enterprise-Grade Quality",
-    description: "Security, scalability, and reliability are built into every solution from day one—not added as afterthoughts.",
+    title: "Built for Trust",
+    description: "Security, scalability, and reliability are never compromised. Your business and data are safe, every step of the way.",
     color: "text-purple-400"
   },
   {
     icon: Lightbulb,
-    title: "Innovation Focus",
-    description: "We leverage cutting-edge technologies and methodologies to ensure your solutions remain competitive for years to come.",
+    title: "Relentless Innovation",
+    description: "We bring the latest digital tools and thinking, making complex B2B processes simple—and keeping you ahead in a fast-moving market.",
     color: "text-orange-400"
   }
 ];
 
+
 const methodology = [
   {
     phase: "Discovery",
-    duration: "1-2 weeks",
+    duration: "1 week",
     icon: Target,
-    title: "Deep Dive Analysis",
-    description: "We immerse ourselves in your business, understanding your challenges, goals, and constraints through comprehensive stakeholder interviews and technical assessments.",
+    title: "Process Deep-Dive",
+    description: "We map your buying journey, highlight bottlenecks, find opportunities, and define clear KPIs for improvement.",
     deliverables: [
-      "Stakeholder interview summaries",
-      "Technical infrastructure audit",
-      "Business process documentation",
-      "Requirements specification",
-      "Success metrics definition"
+      "Procurement bottleneck analysis",
+      "Stakeholder workshops",
+      "Baseline process mapping",
+      "ROI benchmarks"
     ]
   },
   {
     phase: "Strategy",
-    duration: "1-2 weeks", 
+    duration: "1 week",
     icon: Lightbulb,
-    title: "Solution Architecture",
-    description: "We design comprehensive solutions that address your immediate needs while providing a foundation for future growth and scalability.",
+    title: "Blueprint for Better",
+    description: "We design workflows and digital tools tailored to Indian B2B realities—so you get fast, lasting improvement.",
     deliverables: [
-      "Technical architecture diagrams",
+      "Optimized workflow blueprint",
+      "Digital tool recommendations",
       "Implementation roadmap",
-      "Technology stack recommendations",
-      "Integration strategy",
-      "Risk assessment and mitigation plan"
+      "Risk & advantage assessment"
     ]
   },
   {
     phase: "Development",
-    duration: "6-16 weeks",
+    duration: "4-10 weeks",
     icon: Cog,
-    title: "Agile Implementation",
-    description: "Our experienced team builds your solution using proven methodologies, with regular check-ins and iterative improvements based on your feedback.",
+    title: "Rapid Build",
+    description: "Your new procurement system is assembled, tested, and fine-tuned. We keep teams in the loop with regular check-ins.",
     deliverables: [
-      "Working software increments",
-      "Regular progress demos",
-      "Code quality reports",
-      "Performance benchmarks",
-      "Security testing results"
+      "Procurement platform setup",
+      "System integrations (ERP, accounting)",
+      "Automated approval flows",
+      "Onboarding materials"
     ]
   },
   {
-    phase: "ent",
-    duration: "2-4 weeks",
+    phase: "Launch & Support",
+    duration: "Ongoing",
     icon: Rocket,
-    title: "Seamless Launch",
-    description: "We ensure smooth deployment with comprehensive testing, user training, and ongoing support to maximize adoption and success.",
+    title: "Impact, Delivered",
+    description: "Quick rollout. Fast value. You get training, 24/7 support, and improvement based on live business feedback.",
     deliverables: [
-      "Production deployment",
-      "User training materials",
-      "Support documentation",
-      "Monitoring setup",
-      "Success metrics tracking"
+      "Seamless launch to all users",
+      "Team training & Q&A",
+      "Process monitoring dashboard",
+      "Dedicated support"
     ]
   }
 ];
 
 const differentiators = [
   {
-    title: "Enterprise Experience",
-    description: "Our team has built solutions for Fortune 500 companies across industries, bringing deep enterprise knowledge to every project.",
+    title: "Enterprise Scale, Indian Context",
+    description: "We’ve solved procurement and process challenges for India’s largest manufacturers, logistics majors, and service powerhouses.",
     stat: "26+ Enterprise Clients"
   },
   {
-    title: "Proven Methodologies",
-    description: "We use battle-tested approaches refined through hundreds of successful implementations, reducing risk and ensuring predictable outcomes.",
+    title: "Predictable, Proven Results",
+    description: "Hundreds of rollouts—always on time, always delivering measurable gains for cycle time, cost, and supplier response.",
     stat: "156 Projects Delivered"
   },
   {
-    title: "Technology Excellence",
-    description: "We stay at the forefront of enterprise technology, leveraging the latest tools and frameworks to build future-proof solutions.",
-    stat: "99.9% System Uptime"
+    title: "Technology—But Practical",
+    description: "We connect to the tools you use (finance, ERP, vendor portals) and ensure reliability so you focus on business, not fixes.",
+    stat: "99.9% Uptime"
   },
   {
-    title: "Measurable Results",
-    description: "Every engagement is structured around clear success metrics, with regular reporting on progress toward your business objectives.",
-    stat: "$127M Client Savings"
+    title: "Value Tracked, Savings Realized",
+    description: "Every rupee, every hour saved is measured and reported to you. We only win if you do.",
+    stat: "₹1,060Cr+ Savings"
   }
 ];
 
@@ -123,11 +120,15 @@ const Approach = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Approach</span>
+            Our Approach to <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Procurement Transformation
+
+</span>
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
-            We combine deep enterprise expertise with proven methodologies to deliver solutions that not only meet your immediate needs but provide a foundation for long-term competitive advantage.
+            Dystinction delivers real B2B impact—mapping your processes, designing for Indian realities, and rolling out solutions that simply work.
+
+
           </p>
 
           <Button variant="liquid" size="lg" asChild>
@@ -141,7 +142,7 @@ const Approach = () => {
         {/* Core Values */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Core Values</h2>
+            <h2 className="text-3xl font-bold mb-4">Our Values, Your Advantage</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               The principles that guide every decision and drive our commitment to your success.
             </p>
@@ -167,7 +168,7 @@ const Approach = () => {
         {/* Methodology */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Methodology</h2>
+            <h2 className="text-3xl font-bold mb-4">The 4-Step Roadmap: From Chaos to Clarity</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               A proven 4-phase approach that ensures project success and delivers measurable business value.
             </p>
@@ -213,7 +214,7 @@ const Approach = () => {
         {/* What Sets Us Apart */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What Sets Us Apart</h2>
+            <h2 className="text-3xl font-bold mb-4">Why Leading Businesses Trust Dystinction</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               The differentiators that make Dystinction the right choice for your enterprise transformation.
             </p>
