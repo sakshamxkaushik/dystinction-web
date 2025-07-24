@@ -6,57 +6,57 @@ const caseStudies = [
   {
     icon: Truck,
     industry: "Manufacturing",
-    title: "Future of Supply Chain",
-    challenge: "Manual tracking and inefficiencies",
-    solution: "Exploring real-time IoT and predictive analytics",
+    title: "Procurement Acceleration for Indian Factories",
+    challenge: "Slow ordering cycles and supplier mismatch",
+    solution: "Streamlined sourcing and digital supplier evaluation—all on one platform.",
     results: [
-      { metric: "Goal", label: "Zero Inventory Waste" },
-      { metric: "Focus", label: "Cost Reduction" },
-      { metric: "Vision", label: "Automated Insights" }
+      { metric: "35%", label: "Quicker Purchase Orders" },
+      { metric: "2x", label: "Faster Vendor Onboarding" },
+      { metric: "24x7", label: "Order Tracking" }
     ],
-    tech: ["IoT Sensors", "Machine Learning", "Predictive Analytics"],
+    tech: ["Supplier Rating Engine", "Order Automation", "Live Spend Dashboard"],
     gradient: "from-blue-500 to-cyan-500"
   },
   {
     icon: Heart,
     industry: "Healthcare",
-    title: "Next-Gen Data Intelligence",
-    challenge: "Disconnected patient records",
-    solution: "Developing unified data platforms",
+    title: "Reliable Sourcing for Hospital Procurement",
+    challenge: "Unreliable vendors and endless paperwork for medicine supplies",
+    solution: "Verified supplier pools, instant RFQ comparisons, digital compliance automation.",
     results: [
-      { metric: "Goal", label: "Faster Diagnosis" },
-      { metric: "Focus", label: "Cost Efficiency" },
-      { metric: "Vision", label: "Seamless Integrations" }
+      { metric: "99%", label: "Order Fulfillment" },
+      { metric: "50% Fewer", label: "Manual Steps" },
+      { metric: "100%", label: "Regulatory Audit Pass" }
     ],
-    tech: ["AI Analytics", "FHIR APIs", "Data Security"],
+    tech: ["Compliance Dashboard", "E-Approvals", "Supplier Marketplace"],
     gradient: "from-green-500 to-emerald-500"
   },
   {
     icon: Shield,
     industry: "Financial Services",
-    title: "Security & Compliance Framework",
-    challenge: "Failed 3 security audits in 18 months",
-    solution: "Zero-trust architecture with automated compliance",
+    title: "Compliant, Cost-Efficient Vendor Management",
+    challenge: "Delayed onboarding, vendor risk, and audit failures",
+    solution: "Automated vendor due-diligence, spend rules, instant audit-ready reporting.",
     results: [
-      { metric: "100%", label: "Audit Success" },
-      { metric: "85%", label: "Threat Reduction" },
-      { metric: "60%", label: "Compliance Cost Savings" }
+      { metric: "100%", label: "On-Time Vendor KYC" },
+      { metric: "60%", label: "Audit Time Saved" },
+      { metric: "30% Cut", label: "In Operating Costs" }
     ],
-    tech: ["Zero Trust", "Automated Testing", "Blockchain"],
+    tech: ["Automated KYC", "Policy Enforcement", "Audit Trail Engine"],
     gradient: "from-purple-500 to-violet-500"
   },
   {
     icon: BarChart3,
-    industry: "Logistics",
-    title: "Operations Dashboard",
-    challenge: "No real-time visibility into global operations",
-    solution: "Centralized command center with predictive insights",
+    industry: "Logistics & Distribution",
+    title: "Smarter Purchase, Smoother Delivery",
+    challenge: "Difficult order tracking and unresponsive suppliers",
+    solution: "Centralized procurement portal with live order status, supplier scoring, and mobile alerts.",
     results: [
-      { metric: "54%", label: "Efficiency Gain" },
-      { metric: "32%", label: "Cost Reduction" },
-      { metric: "91%", label: "On-time Delivery" }
+      { metric: "40%", label: "Quicker Quote-to-Delivery" },
+      { metric: "3x", label: "Supplier Response Rate" },
+      { metric: "91%", label: "Orders On-Time" }
     ],
-    tech: ["Real-time Data", "Predictive AI", "Mobile Apps"],
+    tech: ["Order Tracking", "Supplier App", "Feedback Ratings"],
     gradient: "from-orange-500 to-red-500"
   }
 ];
@@ -67,20 +67,20 @@ const CaseStudies = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6">
-            <TrendingUp className="w-4 h-4 text-green-500" />
-            <span className="text-sm text-muted-foreground">Success Stories</span>
-          </div>
+  <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6">
+    <TrendingUp className="w-4 h-4 text-green-500" />
+    <span className="text-sm text-muted-foreground">Success Stories</span>
+  </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-          Shaping the Future of{" "}
+           Procurement Success,{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Enterprise Solutions
+            Indian Business Scale Pe
             </span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Discover how we aim to transform industries with forward-thinking strategies and cutting-edge technology.
+             See how we help real Indian enterprises buy smarter, run leaner, and grow with confidence—across manufacturing, hospitals, finance, and more.
           </p>
         </div>
 

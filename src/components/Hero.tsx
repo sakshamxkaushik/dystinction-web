@@ -25,14 +25,13 @@ const Hero = () => {
         {/* Main headline & subheadline */}
         <div className="flex flex-col items-center space-y-4 md:space-y-6 lg:space-y-8">
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-glow leading-tight max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto">
-            Enterprise Software That{" "}
+            Procurement, Bharat Ki Business ,{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Actually Works
+              Speed Pe.
             </span>
           </h1>
           <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed">
-            Transform complex business operations into competitive advantages with
-            purpose-built platforms that scale at enterprise speed.
+            Simplifying buying, vendor management, and business sourcing—purpose-built for India’s scale and ambitions.
           </p>
         </div>
 
@@ -40,12 +39,12 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-xs sm:max-w-none mx-auto mb-8 md:mb-12 lg:mb-16">
           <Button variant="liquid" size="lg" className="group w-full sm:w-auto" asChild>
             <Link to="/book-consultation">
-              Schedule a Deep Dive
+              Talk to Our Experts
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
           <Button variant="glass" size="lg" className="w-full sm:w-auto" asChild>
-            <Link to="/approach">Explore Our Approach</Link>
+            <Link to="/approach">How It Works</Link>
           </Button>
         </div>
 

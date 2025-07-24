@@ -10,29 +10,29 @@ const caseStudiesData = {
     title: "Supply Chain Optimization",
     subtitle: "Transforming Manual Processes into Intelligent Operations",
     client: "Global Manufacturing Corp",
-    challenge: "Manual tracking systems were causing 15% inventory waste and delivery delays, impacting customer satisfaction and profitability.",
-    fullChallenge: "A Fortune 500 manufacturing company was struggling with outdated supply chain management systems. Manual inventory tracking led to significant waste, while lack of real-time visibility into operations caused frequent stockouts and overstock situations. The company was losing $3.2M annually due to inefficiencies.",
-    solution: "Real-time IoT monitoring system with predictive analytics and automated inventory management.",
-    fullSolution: "We implemented a comprehensive IoT-enabled supply chain platform that provides real-time visibility across all operations. The solution includes predictive analytics for demand forecasting, automated reordering systems, and intelligent routing optimization.",
+    challenge: "Manual tracking led to 15% inventory waste and late deliveries, hurting profits and customer trust.",
+    fullChallenge: "A Fortune 500 manufacturer struggled with outdated supply chain processes. Paper-based inventory and no live data meant frequent stockouts, excess, and $3.2M in lost value every year.",
+    solution: "IoT-based operations with automated inventory and predictive analytics.",
+    fullSolution: "Implemented a real-time IoT platform for full supply chain visibility—enabling demand forecasting, proactive reordering, and intelligent routing. All linked to their ERP for smooth handoffs.",
     results: [
-      { metric: "78%", label: "Waste Reduction", description: "Eliminated manual tracking errors and optimized inventory levels" },
-      { metric: "$2.3M", label: "Annual Savings", description: "Through improved efficiency and reduced waste" },
-      { metric: "99.2%", label: "Delivery Accuracy", description: "Real-time tracking and route optimization" },
-      { metric: "45%", label: "Faster Processing", description: "Automated workflows and decision-making" }
+      { metric: "78%", label: "Waste Reduction", description: "Errors eliminated, inventory optimized" },
+      { metric: "$2.3M", label: "Annual Savings", description: "Efficiency directly impacts bottom line" },
+      { metric: "99.2%", label: "Delivery Accuracy", description: "Live status and automated routing" },
+      { metric: "45%", label: "Faster Processing", description: "Approvals and workflows automated" }
     ],
-    technologies: ["IoT Sensors", "Machine Learning", "Real-time Analytics", "Cloud Computing", "Mobile Apps"],
-    timeline: "12 weeks from concept to full deployment",
+    technologies: ["IoT Sensors", "Machine Learning", "Analytics", "Mobile Apps"],
+    timeline: "12-week rollout, end-to-end",
     testimonial: {
-      quote: "Dystinction transformed our entire supply chain operation. The ROI was evident within 3 months, and we're now operating at efficiency levels we never thought possible.",
+      quote: "We saw ROI within 3 months. Dystinction unlocked efficiency we thought impossible.",
       author: "Sarah Johnson",
       title: "CTO, Global Manufacturing Corp"
     },
     keyFeatures: [
-      "Real-time IoT sensor network across all facilities",
-      "Predictive analytics for demand forecasting",
-      "Automated inventory reordering system",
-      "Mobile dashboards for field operations",
-      "Integration with existing ERP systems"
+      "IoT sensor network (all facilities)",
+      "Automated reordering & tracking",
+      "Predictive demand analytics",
+      "Mobile dashboards for field ops",
+      "ERP integration"
     ],
     gradient: "from-blue-500 to-cyan-500"
   },
@@ -40,31 +40,31 @@ const caseStudiesData = {
     icon: Heart,
     industry: "Healthcare",
     title: "Data Intelligence Suite",
-    subtitle: "Unifying Patient Data Across 12 Disparate Systems",
+    subtitle: "Unifying Patient Data for Fast, Accurate Care",
     client: "Regional Healthcare Network",
-    challenge: "Patient data was scattered across 12 different systems, making it impossible to get a complete view of patient health and care history.",
-    fullChallenge: "A major healthcare network with 8 hospitals and 45 clinics was struggling with fragmented patient data. Critical information was trapped in silos, leading to delayed diagnoses, duplicate tests, and compromised patient care. The lack of data integration was costing $4.1M annually in inefficiencies.",
-    solution: "Unified healthcare platform with HIPAA-compliant data integration and AI-powered analytics.",
-    fullSolution: "We built a comprehensive data intelligence platform that securely integrates all patient data sources while maintaining strict HIPAA compliance. The solution includes AI-powered analytics for clinical decision support and predictive health insights.",
+    challenge: "Patient data trapped in 12 systems; delays in diagnosis, repeat testing, and incomplete care.",
+    fullChallenge: "A leading health network had siloed records—making it difficult to see full patient histories and costing $4.1M/yr. Doctors wasted time; critical outcomes suffered.",
+    solution: "Unified, secure data platform with AI-powered analytics and instant, mobile access.",
+    fullSolution: "Built a HIPAA-compliant hub consolidating all hospital and clinic data. Added AI for diagnosis support, eliminating duplicate tests and providing whole-patient insight in real time.",
     results: [
-      { metric: "67%", label: "Faster Diagnosis", description: "Complete patient view enables quicker decision-making" },
-      { metric: "45%", label: "Cost Reduction", description: "Eliminated duplicate tests and procedures" },
-      { metric: "99.99%", label: "System Uptime", description: "Mission-critical reliability for patient care" },
-      { metric: "89%", label: "Provider Satisfaction", description: "Streamlined workflows and better tools" }
+      { metric: "67%", label: "Faster Diagnosis", description: "Quicker patient decisions, end-to-end care" },
+      { metric: "45%", label: "Cost Reduction", description: "No more unnecessary repeat tests" },
+      { metric: "99.99%", label: "Platform Uptime", description: "Always-available, reliable patient data" },
+      { metric: "89%", label: "Provider Satisfaction", description: "Doctors spend more time treating—not searching for info" }
     ],
-    technologies: ["FHIR Integration", "AI Analytics", "Secure APIs", "Blockchain", "Mobile Health Apps"],
-    timeline: "16 weeks with phased rollout across facilities",
+    technologies: ["FHIR Integration", "AI Analytics", "Blockchain", "Mobile Apps"],
+    timeline: "16 weeks across all hospitals",
     testimonial: {
-      quote: "The unified platform has revolutionized how we deliver patient care. Having complete, real-time access to patient data has dramatically improved our clinical outcomes.",
+      quote: "This platform has revolutionized our delivery of care and outcomes.",
       author: "Dr. Michael Chen",
-      title: "Chief Medical Officer, Regional Healthcare Network"
+      title: "Chief Medical Officer, R.H. Network"
     },
     keyFeatures: [
-      "FHIR-compliant data integration across all systems",
-      "AI-powered clinical decision support",
-      "Real-time patient monitoring dashboards",
-      "Secure mobile access for healthcare providers",
-      "Predictive analytics for population health"
+      "Unified, FHIR-compliant records",
+      "AI clinical decision support",
+      "Mobile, real-time access",
+      "Seamless integration (12 systems)",
+      "Predictive population health analytics"
     ],
     gradient: "from-green-500 to-emerald-500"
   },
@@ -72,31 +72,31 @@ const caseStudiesData = {
     icon: Shield,
     industry: "Financial Services",
     title: "Security & Compliance Framework",
-    subtitle: "From Failed Audits to 100% Compliance Success",
+    subtitle: "From Failed Audits to Full Regulatory Confidence",
     client: "Premier Financial Institution",
-    challenge: "Failed 3 major security audits in 18 months due to inadequate compliance frameworks and security vulnerabilities.",
-    fullChallenge: "A mid-size financial institution was facing regulatory pressure after failing multiple security audits. Their legacy systems had numerous vulnerabilities, and manual compliance processes were error-prone and time-consuming. The company faced potential fines of $2.8M and reputation damage.",
-    solution: "Zero-trust security architecture with automated compliance monitoring and reporting.",
-    fullSolution: "We implemented a comprehensive zero-trust security framework with automated compliance monitoring. The solution includes continuous security assessment, automated reporting, and blockchain-based audit trails for complete transparency.",
+    challenge: "Audit failures and legacy processes risked fines, security threats, and reputation.",
+    fullChallenge: "A financial institution with multiple audit failures faced $2.8M in possible fines. Manual compliance, legacy security, and no real-time visibility increased business risk.",
+    solution: "Zero-trust security, automated policy controls, and continuous compliance reporting.",
+    fullSolution: "Designed and rolled out a zero-trust, automated security framework. Built-in compliance checks, instant reporting, and blockchain audit trails. Audit-ready at all times.",
     results: [
-      { metric: "100%", label: "Audit Success", description: "Passed all subsequent security and compliance audits" },
-      { metric: "85%", label: "Threat Reduction", description: "Advanced threat detection and prevention" },
-      { metric: "60%", label: "Compliance Cost Savings", description: "Automated processes reduced manual effort" },
-      { metric: "24/7", label: "Security Monitoring", description: "Continuous threat detection and response" }
+      { metric: "100%", label: "Audit Success", description: "No more failed reviews; all requirements passed" },
+      { metric: "85%", label: "Threat Reduction", description: "Modern security and proactive monitoring" },
+      { metric: "60%", label: "Cost Savings", description: "Automated compliance > manual effort" },
+      { metric: "24/7", label: "Monitoring", description: "Always-on risk detection, instant response" }
     ],
-    technologies: ["Zero Trust Architecture", "Automated Testing", "Blockchain", "AI Security", "Cloud Security"],
-    timeline: "14 weeks with continuous monitoring setup",
+    technologies: ["Zero Trust", "Automated Testing", "Blockchain", "AI Security"],
+    timeline: "14 weeks, continuous monitoring setup",
     testimonial: {
-      quote: "Dystinction not only solved our compliance issues but gave us a security framework that's future-proof. We now exceed industry standards rather than struggling to meet them.",
+      quote: "Now we exceed standards—no more audit stress. Dystinction's compliance tools just work.",
       author: "James Rodriguez",
-      title: "CISO, Premier Financial Institution"
+      title: "CISO, Premier FI"
     },
     keyFeatures: [
-      "Zero-trust network architecture implementation",
-      "Automated compliance monitoring and reporting",
-      "Blockchain-based audit trail system",
-      "AI-powered threat detection and response",
-      "Continuous security assessment tools"
+      "Zero-trust security",
+      "Automated compliance & reporting",
+      "Blockchain audit trails",
+      "AI threat detection",
+      "Live security dashboard"
     ],
     gradient: "from-purple-500 to-violet-500"
   },
@@ -104,35 +104,36 @@ const caseStudiesData = {
     icon: BarChart3,
     industry: "Logistics",
     title: "Operations Dashboard",
-    subtitle: "Global Visibility for Complex Logistics Operations",
+    subtitle: "Global Visibility, Real-Time Control for Logistics",
     client: "International Logistics Company",
-    challenge: "No real-time visibility into global operations across 23 countries, leading to inefficient resource allocation and poor customer service.",
-    fullChallenge: "A global logistics company with operations in 23 countries had no centralized view of their operations. Decision-making was slow, resource allocation was inefficient, and customer service suffered due to lack of real-time information. The company was losing $1.7M annually due to operational inefficiencies.",
-    solution: "Centralized command center with predictive insights and real-time operational intelligence.",
-    fullSolution: "We created a comprehensive operations intelligence platform that provides real-time visibility across all global operations. The solution includes predictive analytics for demand forecasting, automated resource allocation, and customer communication tools.",
+    challenge: "No central visibility across 23 countries; slow decisions, wasted resources, customer complaints.",
+    fullChallenge: "A global logistics leader lacked a central operations view. Resource allocations lagged, and slow responses cost $1.7M/yr—with customer experience taking a direct hit.",
+    solution: "Centralized dashboard with predictive analytics and automated dispatch.",
+    fullSolution: "Built a live command center aggregating 23-country data. Predictive load planning and automated issue alerts cut delays, optimized routes, and improved service.",
     results: [
-      { metric: "54%", label: "Efficiency Gain", description: "Optimized resource allocation and routing" },
-      { metric: "32%", label: "Cost Reduction", description: "Improved operational efficiency and automation" },
-      { metric: "91%", label: "On-time Delivery", description: "Predictive analytics and route optimization" },
-      { metric: "76%", label: "Customer Satisfaction", description: "Improved communication and reliability" }
+      { metric: "54%", label: "Efficiency Gain", description: "Smarter routing, faster response" },
+      { metric: "32%", label: "Cost Reduction", description: "Optimized resource allocation" },
+      { metric: "91%", label: "On-time Delivery", description: "Real-time issue handling and transparency" },
+      { metric: "76%", label: "Customer Satisfaction", description: "Reliable delivery, better communication" }
     ],
-    technologies: ["Real-time Data Processing", "Predictive AI", "Mobile Apps", "IoT Integration", "Cloud Computing"],
-    timeline: "10 weeks with global rollout over 6 months",
+    technologies: ["Data Processing", "Predictive AI", "Mobile Apps", "IoT Integration"],
+    timeline: "10 weeks with phased rollout",
     testimonial: {
-      quote: "The operations dashboard gave us the global visibility we desperately needed. We can now make informed decisions in real-time and have dramatically improved our customer service.",
+      quote: "Global command is now at our fingertips—client impact, cost, and reliability all up!",
       author: "Maria Santos",
-      title: "COO, International Logistics Company"
+      title: "COO, Intl. Logistics"
     },
     keyFeatures: [
-      "Real-time global operations dashboard",
-      "Predictive analytics for demand forecasting",
-      "Automated resource allocation system",
-      "Customer communication portal",
-      "Mobile apps for field operations"
+      "Live dashboards for every region",
+      "Predictive planning & load matching",
+      "Automated resource and personnel allocation",
+      "Integrated customer portal",
+      "Mobile tools for field teams"
     ],
     gradient: "from-orange-500 to-red-500"
   }
 };
+
 
 const CaseStudiesPage = () => {
   const { caseId } = useParams();

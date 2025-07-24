@@ -7,105 +7,106 @@ import { Cover } from "@/components/ui/cover";
 const servicesData = {
   "platform-engineering": {
     icon: Layers,
-    title: "Platform Engineering",
-    subtitle: "Architected for Scale From Day One",
-    description: "Build enterprise platforms that grow with your business, handling millions of users while maintaining lightning-fast performance.",
-    fullDescription: "Our platform engineering expertise combines modern microservices architecture with enterprise-grade scalability requirements. We design systems that not only meet your current needs but anticipate future growth challenges.",
+    title: "Digital Procurement Platforms",
+    subtitle: "One Source of Truth—From Request to Order",
+    description: "Unify all your procurement workflows, approvals, and supplier management on a seamless, modern platform. No more scattered requests, email chains, or lost orders.",
+    fullDescription: "Our digital procurement solutions centralize every part of sourcing—from automated RFQs to digital approval flows, supplier onboarding, and live tracking. You get transparency, control, and speed on every order—empowering your team to work smarter and scale business spending with confidence.",
     benefits: [
-      "Microservices architecture for independent scaling",
-      "Auto-scaling infrastructure that responds to demand",
-      "API-first design for seamless integrations",
-      "Enterprise security built into every layer",
-      "Container orchestration with Kubernetes",
-      "Event-driven architecture for real-time responses",
-      "Load balancing and failover mechanisms",
-      "Performance monitoring and optimization"
+      "Centralized supplier onboarding & records",
+      "Automated request-for-quote (RFQ) flows",
+      "One-click order approvals & tracking",
+      "Live order and fulfillment status",
+      "Supplier performance dashboards",
+      "Easy compliance & audit trail access",
+      "User roles for buyer, finance, & admin teams",
+      "Scalable to thousands of actions per day"
     ],
-    technologies: ["Kubernetes", "Docker", "AWS/Azure/GCP", "Node.js", "React", "GraphQL", "Redis", "PostgreSQL"],
+    technologies: ["React", "Node.js", "AWS/Azure/GCP", "PostgreSQL", "Redis", "GraphQL", "Kubernetes (as backbone)"],
     process: [
-      { step: "Architecture Assessment", duration: "1-2 weeks", description: "Analyze current systems and design scalable architecture" },
-      { step: "Proof of Concept", duration: "2-3 weeks", description: "Build and validate core platform components" },
-      { step: "Development & Testing", duration: "8-12 weeks", description: "Full platform development with comprehensive testing" },
-      { step: "Deployment & Optimization", duration: "2-3 weeks", description: "Production deployment with performance tuning" }
+      { step: "Workflow Mapping", duration: "1-2 weeks", description: "Analyze your current buying processes and pain points." },
+      { step: "Rapid Prototyping", duration: "2-3 weeks", description: "Build and demo critical workflows for feedback." },
+      { step: "Custom Development", duration: "8-12 weeks", description: "Deliver the full platform, including integrations and training." },
+      { step: "Go-Live & Optimization", duration: "2-3 weeks", description: "Onboard your team, collect feedback, and optimize." }
     ],
     gradient: "from-blue-500 to-purple-500"
   },
   "data-integration": {
     icon: Database,
-    title: "Data & Integration",
-    subtitle: "Business Clarity Through Powerful Pipelines",
-    description: "Transform your data chaos into strategic advantage with real-time pipelines, intelligent analytics, and seamless system integrations.",
-    fullDescription: "We specialize in creating unified data ecosystems that break down silos and provide real-time insights across your entire organization. Our integration solutions connect disparate systems while maintaining data integrity and security.",
+    title: "Spend & Supplier Analytics",
+    subtitle: "Better Insights, Smarter Sourcing",
+    description: "Turn procurement data into business value. Get real-time clarity on spend, supplier performance, and savings—so you can drive every decision with facts, not gut-feeling.",
+    fullDescription: "We break down data silos to create a single source for spend, supplier stats, and audit trails. Visual dashboards and automated reports give you the tools to identify savings, manage risk, and optimize your sources—across every category and vendor.",
     benefits: [
-      "Real-time data streaming and processing",
-      "ETL/ELT pipeline automation",
-      "Cross-system integration and synchronization",
-      "Data governance and quality assurance",
-      "Advanced analytics and reporting",
-      "Machine learning model integration",
-      "Data warehouse optimization",
-      "Compliance and audit trail maintenance"
+      "One-click spend visibility, by category or team",
+      "Supplier scorecards & compliance tracking",
+      "Real-time savings and leakage reporting",
+      "Custom analytics tailored to your KPIs",
+      "Automated reconciliation with finance",
+      "Alerts for contract renewals or risk",
+      "Downloadable audit and compliance trails",
+      "Secure data privacy controls"
     ],
-    technologies: ["Apache Kafka", "Elasticsearch", "Snowflake", "Databricks", "Apache Airflow", "Python", "Spark", "Tableau"],
+    technologies: ["Snowflake", "Elasticsearch", "Python", "Tableau", "PowerBI", "Superset", "AWS/GCP Data Services"],
     process: [
-      { step: "Data Audit", duration: "1 week", description: "Map existing data sources and identify integration points" },
-      { step: "Pipeline Design", duration: "2-3 weeks", description: "Design data flow architecture and transformation logic" },
-      { step: "Implementation", duration: "6-10 weeks", description: "Build pipelines, integrations, and analytics dashboards" },
-      { step: "Optimization", duration: "2-4 weeks", description: "Performance tuning and monitoring setup" }
+      { step: "Data Discovery", duration: "1 week", description: "Collect and map procurement & supplier data sources." },
+      { step: "Reporting Blueprint", duration: "2-3 weeks", description: "Design intuitive dashboards and alerts for business users." },
+      { step: "Integration & Build", duration: "6-10 weeks", description: "Connect systems, automate flows, and validate outputs." },
+      { step: "Training & Rollout", duration: "2-4 weeks", description: "Train stakeholders, enhance tools, and support adoption." }
     ],
     gradient: "from-green-500 to-teal-500"
   },
   "cloud-infrastructure": {
     icon: Cloud,
-    title: "Cloud Infrastructure",
-    subtitle: "Resilient, Secure, and Cost-Optimized",
-    description: "Multi-cloud strategies that ensure 99.99% uptime while optimizing costs and maintaining bank-grade security standards.",
-    fullDescription: "Our cloud infrastructure solutions provide the foundation for scalable, secure, and cost-effective enterprise operations. We design resilient architectures that automatically handle traffic spikes while optimizing resource usage.",
+    title: "Seamless Integrations",
+    subtitle: "Connect Everything—Finance, ERP, Inventory, and More",
+    description: "Eliminate double data entry and avoid mismatches. We bring your procurement and business apps together for smoother budgets, easy compliance, and no missed paperwork.",
+    fullDescription: "Our experts plug procurement into your existing tech stack—finance, inventory, and ERP—so you run one unified process. Whether on cloud or hybrid, everything stays in sync, visibility is instant, and data is always where you need it.",
     benefits: [
-      "Multi-cloud and hybrid cloud strategies",
-      "Infrastructure as Code (IaC) implementation",
-      "DevOps automation and CI/CD pipelines",
-      "Security compliance and monitoring",
-      "Cost optimization and resource management",
-      "Disaster recovery and backup solutions",
-      "Container orchestration and management",
-      "Network security and access control"
+      "Fast plug-in to ERPs and inventory systems",
+      "GST-compliant invoice and document flows",
+      "Seamless sync of orders, receipts and payments",
+      "Cloud hosting for reliability and security",
+      "No more manual spreadsheet merges",
+      "Automated backup & disaster recovery",
+      "Audit trails across every system",
+      "Real-time access from web or mobile"
     ],
-    technologies: ["AWS", "Microsoft Azure", "Google Cloud", "Terraform", "Ansible", "Jenkins", "Prometheus", "Grafana"],
+    technologies: ["AWS", "Microsoft Azure", "Google Cloud", "SAP Integration", "REST APIs", "Webhook Automations"],
     process: [
-      { step: "Infrastructure Assessment", duration: "1-2 weeks", description: "Evaluate current infrastructure and security posture" },
-      { step: "Cloud Strategy", duration: "2 weeks", description: "Design optimal cloud architecture and migration plan" },
-      { step: "Migration & Setup", duration: "6-12 weeks", description: "Implement infrastructure and migrate workloads" },
-      { step: "Optimization", duration: "Ongoing", description: "Continuous monitoring and cost optimization" }
+      { step: "Integration Planning", duration: "1-2 weeks", description: "Map business-critical tools and data sources." },
+      { step: "Connector Design", duration: "2 weeks", description: "Set up secure, real-time data links." },
+      { step: "Implementation", duration: "6-12 weeks", description: "Sync, validate, and automate data movement." },
+      { step: "Support & Monitoring", duration: "Ongoing", description: "Continuously maintain and adapt as you grow." }
     ],
     gradient: "from-orange-500 to-red-500"
   },
   "process-automation": {
     icon: Zap,
     title: "Process Automation",
-    subtitle: "Business Logic That Thinks Ahead",
-    description: "Intelligent automation that learns your business processes and continuously optimizes workflows for maximum efficiency.",
-    fullDescription: "We create intelligent automation systems that not only handle repetitive tasks but also make smart decisions based on business rules and machine learning. Our solutions adapt and improve over time, becoming more efficient as they learn from your operations.",
+    subtitle: "Let Your Procurement Run On Autopilot",
+    description: "Automate repetitive approvals, reminders, and updates. With our intelligent automation, your team spends less time chasing, more time growing.",
+    fullDescription: "We help businesses set up workflows and business rules that work in the background. From auto-routing requests for approval, to digital document management and real-time nudges—your buying gets faster and no step gets stuck.",
     benefits: [
-      "Workflow automation and orchestration",
-      "AI-driven process optimization",
-      "Custom business rules engines",
-      "Integration with existing systems",
-      "Real-time monitoring and alerts",
-      "Exception handling and human oversight",
-      "Audit trails and compliance reporting",
-      "Scalable processing capabilities"
+      "Automated approval and escalation flows",
+      "Smart reminders for suppliers and approvers",
+      "Digital document management & e-signature",
+      "Exception alerts—fix issues before they become bottlenecks",
+      "No more manual status checks or email follow-ups",
+      "Flexible rules for finance, quality, and compliance needs",
+      "Track cycle time and SLA adherence",
+      "Easy visual editing for business users"
     ],
-    technologies: ["Zapier", "Microsoft Power Automate", "UiPath", "Python", "Machine Learning", "APIs", "Webhooks", "RPA"],
+    technologies: ["UiPath", "Power Automate", "Python", "APIs", "RPA tools", "Cloud functions"],
     process: [
-      { step: "Process Mapping", duration: "1-2 weeks", description: "Document current workflows and identify automation opportunities" },
-      { step: "Automation Design", duration: "2-3 weeks", description: "Design intelligent automation workflows and business rules" },
-      { step: "Development & Testing", duration: "4-8 weeks", description: "Build automation systems with comprehensive testing" },
-      { step: "Deployment & Training", duration: "2-3 weeks", description: "Deploy systems and train your team" }
+      { step: "Workflow Mapping", duration: "1-2 weeks", description: "Catalog repetitive tasks and approval paths." },
+      { step: "Design & Validation", duration: "2-3 weeks", description: "Create automation flows and gather business feedback." },
+      { step: "Automation Rollout", duration: "4-8 weeks", description: "Implement, test, and refine automations." },
+      { step: "Ongoing Optimization", duration: "2-3 weeks", description: "Monitor performance, add enhancements as needed." }
     ],
     gradient: "from-purple-500 to-pink-500"
   }
 };
+
 
 const ServicesPage = () => {
   const { serviceId } = useParams();

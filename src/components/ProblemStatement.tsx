@@ -3,29 +3,30 @@ import { AlertTriangle, Database, Link, Cog, TrendingDown } from "lucide-react";
 const problems = [
   {
     icon: Link,
-    title: "Disconnected Tools",
-    description: "Multiple systems that don't communicate, creating data silos and workflow bottlenecks.",
-    impact: "47% productivity loss"
+    title: "Disconnected Systems",
+    description: "Multiple tools and platforms that don’t sync, causing delays and inefficiencies.",
+    impact: "40% slower decision making"
   },
   {
     icon: TrendingDown,
-    title: "Scaling Bottlenecks", 
-    description: "Infrastructure that breaks under load, limiting business growth and user experience.",
-    impact: "3x slower response times"
+    title: "Growth Barriers",
+    description: "Outdated infrastructure struggles to keep pace with expanding business needs.",
+    impact: "2.5x longer project timelines"
   },
   {
     icon: Database,
-    title: "Data Silos",
-    description: "Critical business intelligence trapped in isolated systems, preventing informed decisions.",
-    impact: "60% delayed decisions"
+    title: "Information Blockades",
+    description: "Key insights trapped in scattered data sources, slowing strategic actions.",
+    impact: "50% delay in critical decisions"
   },
   {
     icon: Cog,
-    title: "Manual Processes",
-    description: "Time-consuming manual workflows that should be automated, draining team productivity.",
-    impact: "$2M+ annual waste"
+    title: "Manual Operations Burden",
+    description: "Repetitive, low-value manual tasks sap team productivity and agility.",
+    impact: "$1.8M+ lost annually in wasted effort"
   }
 ];
+
 
 const ProblemStatement = () => {
   return (
@@ -35,19 +36,18 @@ const ProblemStatement = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 glass-card px-4 py-2 mb-6">
             <AlertTriangle className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm text-muted-foreground">Business Challenges</span>
+            <span className="text-sm text-muted-foreground">WHAT WE SOLVE</span>
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Is Your Business Held Back By{" "}
+            Making Procurement  {" "}
             <span className="bg-gradient-to-r from-yellow-500 to-red-500 bg-clip-text text-transparent">
-              These Challenges?
+              Effortless and Efficient
             </span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Enterprise growth shouldn't be limited by outdated systems. 
-            We identify and eliminate the technical barriers holding your business back.
+            Say goodbye to the usual procurement roadblocks. With Dystinction, your business skips the chaos and steps into streamlined, smarter sourcing.
           </p>
         </div>
 

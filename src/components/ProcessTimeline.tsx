@@ -4,37 +4,61 @@ const timelineSteps = [
   {
     icon: Search,
     step: "1",
-    title: "Discover",
-    duration: "1-2 weeks",
-    description: "Deep dive into your business goals, technical challenges, and existing infrastructure to create a comprehensive roadmap.",
-    deliverables: ["Technical Architecture Review", "Business Requirements Analysis", "Technology Stack Assessment", "Project Roadmap"],
+    title: "Diagnose",
+    duration: "1 week",
+    description:
+      "We start by understanding your procurement flow: where it breaks, where bottlenecks slow you down, and where wasted effort or cost hide. You get a clear, customized action plan.",
+    deliverables: [
+      "Procurement pain-point mapping",
+      "Supplier & workflow diagnostic",
+      "Success criteria definition",
+      "Solution blueprint"
+    ],
     color: "text-blue-400"
   },
   {
     icon: Palette,
     step: "2", 
     title: "Design",
-    duration: "2-3 weeks",
-    description: "Architect scalable systems with enterprise-grade security, performance optimization, and future-proof technology choices.",
-    deliverables: ["System Architecture Design", "Database Schema", "API Specifications", "Security Framework"],
+    duration: "1-2 weeks",
+    description:
+      "We sketch your new buying process: streamlined approvals, single-point supplier touch, and smarter spending. Visual walkthroughs keep your business team in the loop at every step.",
+    deliverables: [
+      "Optimized process maps",
+      "User-friendly dashboards",
+      "Supplier management flows",
+      "Risk & compliance checks"
+    ],
     color: "text-purple-400"
   },
   {
     icon: Code,
     step: "3",
-    title: "Develop",
-    duration: "8-16 weeks",
-    description: "Build with enterprise-quality engineering practices, continuous integration, and rigorous testing throughout development.",
-    deliverables: ["Core Platform Development", "Integration Implementation", "Quality Assurance", "Performance Testing"],
+    title: "Build & Integrate",
+    duration: "3-6 weeks",
+    description:
+      "We digitize your new workflow, connect your current tools (ERP/finance/inventory), and build everything for easy onboarding. Busywork gets automated, and your team’s daily life improves.",
+    deliverables: [
+      "Digital procurement platform",
+      "Integrated order & approval flows",
+      "Automated supplier matching",
+      "Training for all users"
+    ],
     color: "text-green-400"
   },
   {
     icon: Rocket,
     step: "4",
-    title: "Deploy & Support",
-    duration: "Ongoing",
-    description: "Seamless rollout with zero-downtime deployment, comprehensive monitoring, and 24/7 enterprise support.",
-    deliverables: ["Production Deployment", "Monitoring Setup", "Team Training", "24/7 Support"],
+    title: "Go Live & Support",
+    duration: "Instant & ongoing",
+    description:
+      "You’re live—no downtime, no disruption. Our support team ensures every order, request or approval runs seamlessly, and you get actionable reporting from day one.",
+    deliverables: [
+      "Smooth launch & migration",
+      "24/7 help & troubleshooting",
+      "Live spend and savings dashboard",
+      "Regular enhancements"
+    ],
     color: "text-orange-400"
   }
 ];
@@ -51,15 +75,14 @@ const ProcessTimeline = () => {
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            From Concept to{" "}
+            Procurement Transformation, {" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Enterprise Reality
+              Step by Step
             </span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our proven 4-step methodology ensures your enterprise software project 
-            delivers on time, on budget, and exceeds performance expectations.
+            Our practical, business-first approach takes your procurement from slow and scattered to fast, transparent, and growth-focused—in just a few weeks.
           </p>
         </div>
 
@@ -67,7 +90,7 @@ const ProcessTimeline = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative">
             {/* Connection line for desktop */}
-            <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 via-green-400 to-orange-400 opacity-30" />
+            <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-orange-400 opacity-30" />
             
             {timelineSteps.map((step, index) => (
               <div key={index} className="relative">

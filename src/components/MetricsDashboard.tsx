@@ -53,32 +53,32 @@ const MetricsDashboard = () => {
   const metrics = [
     {
       icon: Activity,
-      label: "System Uptime",
-      value: "99.9%",
+      label: "Place an order, get a response—and delivery—faster than before.",
+      value: "30% Shorter Order Cycles",
       trend: "↗ +0.1%",
       delay: 200
     },
     {
       icon: Clock,
-      label: "API Response Time",
-      value: "<100ms",
+      label: "Only real, responsive vendors. No more chasing or wasted calls.",
+      value: "2x Increase in Quality Supplier Matches ",
       trend: "↗ -15ms",
       delay: 400
     },
     {
       icon: Database,
-      label: "Daily Data Processing",
-      value: "10M",
+      label: "Cut down on approvals, tracking, and manual follow-ups.",
+      value: "50% Fewer Paperwork Hours",
       trend: "↗ +2.3M",
       delay: 600
+    },
+    {
+      icon: Users,
+      label: "Our team and your platform—ready whenever you need help.",
+      value: "Always-On Support",
+      trend: "",
+      delay: 800
     }
-    // {
-    //   icon: Users,
-    //   label: "Active Users",
-    //   value: "50K+",
-    //   trend: "↗ +12%",
-    //   delay: 800
-    // }
     // {
     //   icon: Zap,
     //   label: "Deployments Today",
@@ -99,20 +99,19 @@ const MetricsDashboard = () => {
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Real-Time Platform{" "}
+            Results That Matter, Value You Can {" "}
             {/* <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> */}
-              <Cover> Performance</Cover>
+              <Cover >Measure</Cover>
             {/* </span> */}
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our enterprise platforms deliver measurable results with transparent, 
-            real-time monitoring across all critical infrastructure components.
+            See how Dystinction transforms procurement for Indian enterprises—making every order faster, every rupee smarter.
           </p>
         </div>
 
         {/* Metrics grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
           {metrics.map((metric, index) => (
             <MetricCard key={index} {...metric} />
           ))}

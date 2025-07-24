@@ -5,37 +5,62 @@ import { Link } from "react-router-dom";
 const services = [
   {
     icon: Layers,
-    title: "Platform Engineering",
-    subtitle: "Architected for Scale From Day One",
-    description: "Custom enterprise platforms built with microservices architecture, designed to handle millions of users while maintaining lightning-fast performance.",
-    features: ["Microservices Architecture", "Auto-scaling Infrastructure", "API-first Design", "Enterprise Security"],
+    title: "Digital Procurement Platforms",
+    subtitle: "Sourcing Made Simple, Orders Done Fast",
+    description:
+      "Bring all your sourcing, supplier management, and approvals onto one platform. No more scattered forms or endless emails—get complete control and total clarity from request to delivery.",
+    features: [
+      "Centralized supplier onboarding",
+      "Request-for-quote automation",
+      "One-click order approvals",
+      "Live order tracking"
+    ],
     gradient: "from-blue-500 to-purple-500"
   },
   {
     icon: Database,
-    title: "Data & Integration",
-    subtitle: "Business Clarity Through Powerful Pipelines",
-    description: "Transform your data chaos into strategic advantage with real-time pipelines, intelligent analytics, and seamless system integrations.",
-    features: ["Real-time Analytics", "ETL Pipelines", "System Integration", "Data Governance"],
+    title: "Spend & Vendor Analytics",
+    subtitle: "Smarter Decisions, Every Single Time",
+    description:
+      "Unlock hidden savings and real supplier insights. Track every rupee, compare vendors instantly, and manage risk—see the value of your spending in real time, not as guesswork.",
+    features: [
+      "Spend dashboard & custom reports",
+      "Supplier scorecards",
+      "Savings opportunity alerts",
+      "Compliance & audit trails"
+    ],
     gradient: "from-green-500 to-teal-500"
   },
   {
     icon: Cloud,
-    title: "Cloud Infrastructure",
-    subtitle: "Resilient, Secure, and Cost-Optimized",
-    description: "Multi-cloud strategies that ensure 99.99% uptime while optimizing costs and maintaining bank-grade security standards.",
-    features: ["Multi-Cloud Strategy", "DevOps Automation", "Security Compliance", "Cost Optimization"],
+    title: "Seamless Integrations",
+    subtitle: "All Your Tools. Finally In Sync.",
+    description:
+      "Connect procurement with your current finance, inventory or ERP systems—zero double-entry, no misplaced data, fewer errors. Fast, safe, and reliable.",
+    features: [
+      "ERP & finance system connectors",
+      "Live inventory sync",
+      "GST & documentation flow",
+      "Secure cloud hosting"
+    ],
     gradient: "from-orange-500 to-red-500"
   },
   {
     icon: Zap,
     title: "Process Automation",
-    subtitle: "Business Logic That Thinks Ahead",
-    description: "Intelligent automation that learns your business processes and continuously optimizes workflows for maximum efficiency.",
-    features: ["Workflow Automation", "AI-Driven Optimization", "Custom Integrations", "Business Rules Engine"],
+    subtitle: "From Chasing Paperwork to Building Value",
+    description:
+      "Say goodbye to repetitive approvals, manual follow-ups, and lost documents. Free your teams to focus on growth—let automation handle the rest.",
+    features: [
+      "Auto-reminders & approval workflows",
+      "Digital document management",
+      "Exception alerts & escalations",
+      "Custom rule setup"
+    ],
     gradient: "from-purple-500 to-pink-500"
   }
 ];
+
 
 const Services = () => {
   return (
