@@ -22,15 +22,17 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Main headline & subheadline */}
-        <div className="flex flex-col items-center space-y-4 md:space-y-6 lg:space-y-8">
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto">
-            B2B ab{" "}
-            <span className="text-highlight">Tech-Enabled Hoga!</span>
-          </h1>
-          <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed">
-            Solving industrial procurement gaps with smart, scalable tech.
-          </p>
+        <div className="hero-container floating-element pt-24 sm:pt-32 md:pt-20">
+          <div className="flex flex-col items-center text-center space-y-4 sm:space-y-6 md:space-y-8">
+            <h1 className="hero-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-snug sm:leading-tight md:leading-tight max-w-xl sm:max-w-3xl md:max-w-5xl mx-auto">
+              <span className="block text-highlight">
+                B2B Orders? Ab Instant.
+              </span>
+            </h1>
+            <p className="hero-subtitle text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-sm sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed">
+              Solving industrial procurement gaps with smart, scalable tech.
+            </p>
+          </div>
         </div>
 
         {/* CTA Buttons */}
@@ -61,7 +63,7 @@ const Hero = () => {
           {/* Overlay content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center h-full z-10 pointer-events-none">
             <p className="text-xs sm:text-sm  font-semibold text-muted-foreground mb-2 text-center">
-              We're incubated by
+              Institutional Partners
             </p>
             <div className="flex flex-row items-center justify-center gap-8 sm:gap-12 mt-2">
               <img
