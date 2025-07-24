@@ -14,16 +14,25 @@ const Index = () => {
   const [isExiting, setIsExiting] = useState(false);
   const [showContent, setShowContent] = useState(false);
   const [heroVisible, setHeroVisible] = useState(false);
+  const [contentReady, setContentReady] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Add loading class to body to prevent scroll
+    // Add loading class to body to prevent scroll and hide content
     document.body.classList.add('loading');
+    document.body.style.overflow = 'hidden';
+    document.body.style.height = '100vh';
     
-    // Position the content div exactly where the loading screen elements are
+    // Hide content initially to prevent any flashing
     if (contentRef.current) {
       contentRef.current.style.opacity = '0';
-      contentRef.current.style.display = 'block';
+      contentRef.current.style.visibility = 'hidden';
+      contentRef.current.style.position = 'fixed';
+      contentRef.current.style.top = '0';
+      contentRef.current.style.left = '0';
+      contentRef.current.style.width = '100%';
+      contentRef.current.style.height = '100vh';
+      contentRef.current.style.overflow = 'hidden';
     }
     
     // Reduced to 1.8-second timer for loading screen
@@ -31,36 +40,42 @@ const Index = () => {
       // Start exit animation
       setIsExiting(true);
       
-      // Prepare content for transition
-      if (contentRef.current) {
-        contentRef.current.style.opacity = '0';
-      }
-      
-      // After exit animation starts, begin showing content
+      // Prepare content for seamless transition
       setTimeout(() => {
-        // Make sure hero is ready before removing loading screen
+        // Make hero visible first
         setHeroVisible(true);
+        setContentReady(true);
         
-        // Short delay to ensure hero is rendered before showing
+        // Start showing content with proper positioning
+        if (contentRef.current) {
+          contentRef.current.style.position = 'relative';
+          contentRef.current.style.visibility = 'visible';
+          contentRef.current.style.overflow = 'visible';
+          contentRef.current.style.height = 'auto';
+        }
+        
         setTimeout(() => {
           setShowContent(true);
           if (contentRef.current) {
             contentRef.current.style.opacity = '1';
           }
           
-          // Finally remove loading screen after transition is complete
+          // Remove loading screen and restore body settings
           setTimeout(() => {
             setIsLoading(false);
-            // Remove loading class from body
             document.body.classList.remove('loading');
-          }, 100);
-        }, 50);
-      }, 500); // Increased exit animation time for smoother transition
-    }, 1800); // Reduced from 2500ms to 1800ms
+            document.body.style.overflow = '';
+            document.body.style.height = '';
+          }, 150);
+        }, 100);
+      }, 400);
+    }, 1800);
 
     return () => {
       clearTimeout(loadingTimer);
       document.body.classList.remove('loading');
+      document.body.style.overflow = '';
+      document.body.style.height = '';
     };
   }, []);
 
@@ -93,68 +108,80 @@ const Index = () => {
   }, []);
 
   return (
-    <div className={`content-container ${isLoading ? 'loading' : ''}`}>
-      {/* Fixed Background Layer */}
-      <div className="fixed inset-0 bg-gradient-hero z-0" />
+    <>
+      {/* Loading Screen - Only render when loading */}
+      {isLoading && (
+        <div className="fixed inset-0 z-[9999] bg-background">
+          <LoadingScreen isExiting={isExiting} />
+        </div>
+      )}
       
-      {/* Loading Screen - Always render but control visibility with state */}
-      <div className={`fixed inset-0 z-50 ${isLoading ? 'block' : 'hidden'}`}>
-        <LoadingScreen isExiting={isExiting} />
-      </div>
-      
-      {/* Main Content Container - Always rendered but initially hidden */}
+      {/* Main Content Container - Hidden until content is ready */}
       <div 
         ref={contentRef}
-        className={`relative min-h-screen z-10 transition-all duration-1000 ease-out ${
-          showContent ? 'pointer-events-auto' : 'pointer-events-none'
+        className={`min-h-screen transition-all duration-1000 ease-out ${
+          contentReady ? 'relative z-10' : 'fixed inset-0 z-0'
+        } ${
+          showContent ? 'opacity-100' : 'opacity-0'
         }`}
+        style={{
+          visibility: contentReady ? 'visible' : 'hidden'
+        }}
       >
-        <Hero isVisible={heroVisible} />
+        {/* Fixed Background Layer */}
+        <div className="fixed inset-0 bg-gradient-hero -z-10" />
         
-        {/* Other components with reduced delays */}
-        <div className={`transition-all duration-500 delay-300 ${
-          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          <MetricsDashboard />
-        </div>
+        {/* Hero Section - Always render first */}
+        <Hero isVisible={heroVisible && showContent} />
         
-        <div className={`transition-all duration-500 delay-500 ${
-          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          <ProblemStatement />
-        </div>
-        
-        <div className={`transition-all duration-500 delay-700 ${
-          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          <PerformanceBenchmarks />
-        </div>
-        
-        <div className={`transition-all duration-500 delay-900 ${
-          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          <Services />
-        </div>
-        
-        <div className={`transition-all duration-500 delay-1100 ${
-          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          <ProcessTimeline />
-        </div>
-        
-        <div className={`transition-all duration-500 delay-1300 ${
-          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          <CaseStudies />
-        </div>
-        
-        <div className={`transition-all duration-500 delay-1500 ${
-          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          <Contact />
-        </div>
+        {/* Other components with staggered delays only after hero is visible */}
+        {contentReady && (
+          <>
+            <div className={`transition-all duration-500 delay-300 ${
+              showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <MetricsDashboard />
+            </div>
+            
+            <div className={`transition-all duration-500 delay-500 ${
+              showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <ProblemStatement />
+            </div>
+            
+            <div className={`transition-all duration-500 delay-700 ${
+              showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <PerformanceBenchmarks />
+            </div>
+            
+            <div className={`transition-all duration-500 delay-900 ${
+              showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <Services />
+            </div>
+            
+            <div className={`transition-all duration-500 delay-1100 ${
+              showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <ProcessTimeline />
+            </div>
+            
+            <div className={`transition-all duration-500 delay-1300 ${
+              showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <CaseStudies />
+            </div>
+            
+            <div className={`transition-all duration-500 delay-1500 ${
+              showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <Contact />
+            </div>
+          </>
+        )}
       </div>
-    </div>
+    </>
   );
 };
 
