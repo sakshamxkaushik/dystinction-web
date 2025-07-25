@@ -17,6 +17,11 @@ const Index = () => {
   const [contentReady, setContentReady] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
+useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, []);
+
+
   useEffect(() => {
     // Add loading class to body to prevent scroll and hide content
     document.body.classList.add('loading');
@@ -129,7 +134,7 @@ const Index = () => {
         }}
       >
         {/* Fixed Background Layer */}
-        <div className="fixed inset-0 bg-gradient-hero -z-10" />
+        {/* <div className="fixed inset-0 bg-gradient-hero -z-10" /> */}
         
         {/* Hero Section - Always render first */}
         <Hero isVisible={heroVisible && showContent} />

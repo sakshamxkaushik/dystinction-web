@@ -135,7 +135,7 @@ const Chatbot = () => {
   return (
     <div className={`fixed bottom-0 right-0 w-full sm:bottom-6 sm:right-6 sm:w-96 bg-white dark:bg-neutral-900 rounded-none sm:rounded-2xl shadow-2xl border border-gray-200 dark:border-neutral-800 z-50 overflow-hidden transition-all duration-500 animate-fade-in-up ${closing ? 'animate-fade-out-down' : ''}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex items-center justify-between">
+      <div className="bg-gradient-to-r from-[#189ab4] to-[#75e6da] text-white p-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center animate-fade-in">
             <MessageCircle className="w-4 h-4" />

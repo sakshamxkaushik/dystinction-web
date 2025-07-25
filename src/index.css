@@ -115,6 +115,7 @@
     --card: 222 30% 7%;
     --glass-opacity: 0.15;
     --glass-opacity-hover: 0.28;
+    /* --gradient-hero: linear-gradient(180deg, hsl(222 35% 5%), hsl(222 30% 7%), hsl(182 100% 10% / 0.2)); */
   }
 
   .light {
@@ -1197,6 +1198,12 @@ body.loading .footer {
 
 .loading-overlay.active {
   pointer-events: all;
+}
+
+footer, .footer, [role="contentinfo"] {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto !important;
 }
 
 /* Ensure no content bleeds through during transition */

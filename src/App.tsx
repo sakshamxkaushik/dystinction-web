@@ -13,6 +13,7 @@ import Navigation from "./components/Navigation";
 import Footer from "@/components/ui/Footer";
 import { HelmetProvider } from 'react-helmet-async';
 import Chatbot from "./components/Chatbot";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Navigation />
           <Routes>
             <Route path="/" element={<Index />} />

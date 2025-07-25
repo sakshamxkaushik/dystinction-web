@@ -22,7 +22,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full bg-background border-t border-glass py-12 mt-12">
+    <footer className="w-full bg-background border-t border-glass py-12 ">
       <div className="container mx-auto px-6">
         {/* Top section with logo and links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
