@@ -8,15 +8,13 @@ export function ThemeSwitcher() {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    // On mount, read the theme from localStorage or system preference
+    // On mount, read the theme from localStorage or use light as default
     const savedTheme = localStorage.getItem("theme") as Theme | null;
     let initialTheme: Theme = "light";
-    if (savedTheme === "light" || savedTheme === "dark") {
+    if (savedTheme === "dark") {
       initialTheme = savedTheme;
-    } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      initialTheme = prefersDark ? "dark" : "light";
     }
+    // Always default to light theme if no saved preference or system is dark
     setTheme(initialTheme);
     document.body.classList.remove("dark", "light");
     document.body.classList.add(initialTheme);
@@ -39,4 +37,4 @@ export function ThemeSwitcher() {
       )}
     </Button>
   );
-} 
+}

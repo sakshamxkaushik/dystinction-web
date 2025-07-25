@@ -75,7 +75,7 @@ const CaseStudies = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
            Procurement Success,{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Indian Business Scale Pe
+            at the Scale India Demands
             </span>
           </h2>
           

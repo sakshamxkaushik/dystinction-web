@@ -1212,3 +1212,18 @@ footer, .footer, [role="contentinfo"] {
   isolation: isolate;
   z-index: 1;
 }
+
+
+.logo-gradient-diwali {
+  background: linear-gradient(135deg, 
+    #f59e0b 0%, 
+    #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* For SVG fill */
+.svg-logo-diwali {
+  fill: url(#primary-diwali);
+}

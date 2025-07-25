@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeSwitcher } from "@/components/ui/theme-switcher";
+import LogoDark from "@/assets/svg/logo_dark.svg";
+import LogoLight from "@/assets/svg/logo_light.svg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +26,10 @@ const Navigation = () => {
       if (document.body.classList.contains("light")) setTheme("light");
       else setTheme("dark");
     });
-    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
     // Set initial theme
     if (document.body.classList.contains("light")) setTheme("light");
     else setTheme("dark");
@@ -57,9 +62,9 @@ const Navigation = () => {
             className="flex items-center"
           >
             <img
-              src={theme === "light" ? "/images/logo-dark.png" : "/images/logo-light.png"}
-              alt="Dystinction Logo"
-              className="h-14 w-auto object-contain sm:h-20 transition-all duration-200"
+              src={theme === "light" ? LogoLight : LogoDark}
+              alt="Dystinction"
+              className="h-10 w-auto ml-4 sm:ml-6" // Added margin-left
             />
           </Link>
 
