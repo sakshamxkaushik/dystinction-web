@@ -147,7 +147,7 @@ const Contact = () => {
             {/* Company tagline */}
             <div className="glass-card p-11 bg-gradient-to-r from-primary/5 to-secondary/5">
               <div className="text-center">
-                <h4 className="font-bold text-xl mb-4 text-glow">
+                <h4 className="font-bold text-xl mb-4">
                   Dystinction
                 </h4>
                 <p className="text-primary font-medium mb-2">

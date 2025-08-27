@@ -91,20 +91,20 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="glass-card group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden"
+              className="glass-card group transition-all duration-500 relative overflow-hidden"
             >
               {/* Background gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 duration-500`} />
               
               <div className="relative">
                 {/* Header */}
                 <div className="flex items-start gap-4 mb-6">
-                  <div className={`p-4 rounded-2xl bg-gradient-to-br ${service.gradient} bg-opacity-10 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`p-4 rounded-2xl bg-gradient-to-br ${service.gradient} bg-opacity-10 `}>
                     <service.icon className="w-8 h-8 text-foreground" />
                   </div>
                   
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-glow transition-all duration-300">
+                    <h3 className="text-2xl font-bold mb-2  duration-300">
                       {service.title}
                     </h3>
                     <p className="text-primary font-medium">

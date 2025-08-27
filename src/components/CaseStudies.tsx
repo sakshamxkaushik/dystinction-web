@@ -89,21 +89,21 @@ const CaseStudies = () => {
           {caseStudies.map((study, index) => (
             <div 
               key={index}
-              className="glass-card group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden"
+              className="glass-card group transition-all duration-500 relative overflow-hidden"
             >
               {/* Background gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${study.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${study.gradient} opacity-0 duration-500`} />
               
               <div className="relative">
                 {/* Header */}
                 <div className="flex items-start gap-4 mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${study.gradient} bg-opacity-10 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`p-3 rounded-xl bg-gradient-to-br ${study.gradient} bg-opacity-10 `}>
                     <study.icon className="w-6 h-6 text-foreground" />
                   </div>
                   
                   <div className="flex-1">
                     <div className="text-sm text-muted-foreground mb-1">{study.industry}</div>
-                    <h3 className="text-xl font-bold group-hover:text-glow transition-all duration-300">
+                    <h3 className="text-xl font-bold">
                       {study.title}
                     </h3>
                   </div>

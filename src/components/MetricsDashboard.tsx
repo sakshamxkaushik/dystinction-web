@@ -21,9 +21,9 @@ const MetricCard = ({ icon: Icon, label, value, trend, delay = 0 }: MetricCardPr
   }, [value, delay]);
 
   return (
-    <div className="glass-card group hover:scale-105 transition-all duration-300">
+    <div className="glass-card group ">
       <div className="flex items-start justify-between mb-4">
-        <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+        <div className="p-3 rounded-xl bg-primary/10">
           <Icon className="w-6 h-6 text-primary" />
         </div>
         <div className="text-right">
@@ -32,7 +32,7 @@ const MetricCard = ({ icon: Icon, label, value, trend, delay = 0 }: MetricCardPr
       </div>
       
       <div className="space-y-1">
-        <div className="text-2xl font-bold text-foreground group-hover:text-glow transition-all duration-300">
+        <div className="text-2xl font-bold text-foreground ">
           {currentValue}
         </div>
         <div className="text-sm text-muted-foreground">{label}</div>

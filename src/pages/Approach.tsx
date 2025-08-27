@@ -150,9 +150,9 @@ const Approach = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="glass-card p-8 group hover:scale-[1.02] transition-all duration-300">
+              <div key={index} className="glass-card p-8 group transition-all duration-300">
                 <div className="flex items-start gap-4">
-                  <div className={`p-3 rounded-xl bg-muted/20 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`p-3 rounded-xl bg-muted/20 `}>
                     <value.icon className={`w-6 h-6 ${value.color}`} />
                   </div>
                   <div className="flex-1">
@@ -176,7 +176,7 @@ const Approach = () => {
 
           <div className="space-y-8">
             {methodology.map((phase, index) => (
-              <div key={index} className="glass-card p-8 group hover:scale-[1.01] transition-all duration-300">
+              <div key={index} className="glass-card p-8 group transition-all duration-300">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Phase Info */}
                   <div className="lg:col-span-1">
@@ -222,8 +222,8 @@ const Approach = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {differentiators.map((diff, index) => (
-              <div key={index} className="glass-card p-8 text-center group hover:scale-[1.02] transition-all duration-300">
-                <div className="text-3xl font-bold text-primary mb-2 group-hover:text-glow transition-all duration-300">
+              <div key={index} className="glass-card p-8 text-center group transition-all duration-300">
+                <div className="text-3xl font-bold text-primary mb-2 ">
                   {diff.stat}
                 </div>
                 <h3 className="text-xl font-bold mb-4">{diff.title}</h3>
