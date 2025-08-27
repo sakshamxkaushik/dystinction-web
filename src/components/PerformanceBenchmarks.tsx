@@ -80,15 +80,15 @@ const PerformanceBenchmarks = () => {
           {benchmarks.map((benchmark, index) => (
             <div 
               key={index}
-              className="glass-card text-center group hover:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_hsl(var(--primary)/0.2)]"
+              className="glass-card text-center group"
             >
               <div className="mb-6">
-                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300`}>
+                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 `}>
                   <benchmark.icon className={`w-8 h-8 ${benchmark.color}`} />
                 </div>
               </div>
               <div className="space-y-4">
-                <div className={`text-4xl md:text-5xl font-bold ${benchmark.color} group-hover:text-glow transition-all duration-300`}>
+                <div className={`text-4xl md:text-5xl font-bold ${benchmark.color}`}>
                   {benchmark.metric}
                 </div>
                 <div className="text-lg font-semibold text-foreground">

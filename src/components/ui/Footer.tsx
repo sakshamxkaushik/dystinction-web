@@ -113,10 +113,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold">Contact Us</h3>
             <address className="not-italic text-sm text-muted-foreground">
-              <p>RUSA, Panjab University</p>
+              <p> #2&3 RUSA, Panjab University</p>
               <p>Sector 25, Chandigarh, India 160036</p>
               <p className="mt-2">hello@dystinction.com</p>
-              <p>+1 (555) 123-4567</p>
+              <p>+91 (905) 650-2830</p>
             </address>
             <Link to="/book-consultation" className="inline-flex items-center text-sm text-primary hover:underline mt-2">
               Book a consultation

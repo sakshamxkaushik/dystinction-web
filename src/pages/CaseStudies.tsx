@@ -151,7 +151,7 @@ const CaseStudiesPage = () => {
         {/* Back navigation */}
         <Link 
           to="/case-studies" 
-          className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-muted-foreground  transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Case Studies
@@ -311,9 +311,9 @@ const CaseStudiesPage = () => {
                       className="block p-3 rounded-lg hover:bg-muted/50 transition-colors group"
                     >
                       <div className="flex items-start gap-3">
-                        <relatedCase.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors mt-0.5" />
+                        <relatedCase.icon className="w-5 h-5 text-muted-foreground  mt-0.5" />
                         <div>
-                          <div className="text-sm font-medium group-hover:text-primary transition-colors">
+                          <div className="text-sm font-medium  transition-colors">
                             {relatedCase.title}
                           </div>
                           <div className="text-xs text-muted-foreground">{relatedCase.industry}</div>
@@ -358,7 +358,7 @@ const CaseStudiesOverview = () => {
           {Object.entries(caseStudiesData).map(([key, study]) => (
             <div 
               key={key}
-              className="glass-card group hover:scale-[1.02] transition-all duration-500 relative overflow-hidden"
+              className="glass-card group transition-all duration-500 relative overflow-hidden"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${study.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
               
