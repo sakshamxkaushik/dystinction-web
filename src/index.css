@@ -85,10 +85,7 @@
 
     /* Animation Timing - Enhanced */
     --transition-liquid: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-glass: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-theme: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --transition-elastic: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     /* Enhanced Shadows */
     --shadow-glass: 0 8px 32px hsl(222 28% 8% / 0.5), 
@@ -211,7 +208,6 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background: var(--gradient-hero);
     background-attachment: fixed;
     min-height: 100vh;
     width: 100%;
@@ -345,31 +341,7 @@
     transition: var(--transition-elastic);
   }
 
-  .text-highlight::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, 
-                hsl(var(--primary) / 0.8), 
-                hsl(var(--secondary) / 0.6), 
-                hsl(var(--tertiary) / 0.4));
-    border-radius: 2px;
-    animation: underline-glow 3s ease-in-out infinite;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: var(--transition-bounce);
-  }
 
-  .text-highlight:hover {
-    color: hsl(var(--primary-dark));
-    text-shadow: 0 0 20px hsl(var(--primary) / 0.9),
-                 0 0 40px hsl(var(--primary) / 0.6),
-                 0 2px 8px hsl(var(--primary) / 0.3);
-    transform: translateY(-2px) scale(1.05);
-  }
 
   /* Dark mode hover adjustments */
   .dark .text-highlight:hover {
@@ -397,11 +369,7 @@
     cursor: default;
   }
 
-  .hero-title:hover {
-    transform: translateY(-3px);
-    text-shadow: 0 3px 12px hsl(var(--foreground) / 0.3),
-                 0 0 20px hsl(var(--primary) / 0.2);
-  }
+
 
   .hero-subtitle {
     transition: var(--transition-glass);
@@ -607,29 +575,6 @@
   }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { 
-    box-shadow: 0 0 30px hsl(var(--primary) / 0.3);
-    transform: scale(1);
-  }
-  50% { 
-    box-shadow: 0 0 50px hsl(var(--primary) / 0.6), 
-                0 0 80px hsl(var(--secondary) / 0.3),
-                0 0 120px hsl(var(--tertiary) / 0.2);
-    transform: scale(1.05);
-  }
-}
-
-@keyframes rotate-glow {
-  0% {
-    transform: rotate(0deg);
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    filter: hue-rotate(360deg);
-  }
-}
 
 @keyframes breathe {
   0%, 100% {
@@ -740,16 +685,7 @@
   }
 }
 
-@keyframes hero-appear {
-  0% {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 /* Smooth transition from loading to hero */
 @keyframes smooth-title-transition {
@@ -763,27 +699,6 @@
   }
 }
 
-@keyframes slide-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
 @keyframes bounce-in {
   0% {
@@ -802,34 +717,6 @@
   }
 }
 
-@layer utilities {
-  .animate-fade-in {
-    animation: fade-in 0.6s cubic-bezier(0.4,0,0.2,1) both;
-  }
-  .animate-fade-in-up {
-    animation: fade-in-up 0.6s cubic-bezier(0.4,0,0.2,1) both;
-  }
-  .animate-fade-out-down {
-    animation: fade-out-down 0.4s cubic-bezier(0.4,0,0.2,1) both;
-  }
-  .animate-slide-in-left {
-    animation: slide-in-left 0.5s cubic-bezier(0.4,0,0.2,1) both;
-  }
-  .animate-slide-in-right {
-    animation: slide-in-right 0.5s cubic-bezier(0.4,0,0.2,1) both;
-  }
-  .animate-bounce-in {
-    animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
-  }
-
-  /* Animation delays */
-  .animate-delay-100 { animation-delay: 100ms; }
-  .animate-delay-200 { animation-delay: 200ms; }
-  .animate-delay-300 { animation-delay: 300ms; }
-  .animate-delay-500 { animation-delay: 500ms; }
-  .animate-delay-700 { animation-delay: 700ms; }
-  .animate-delay-1000 { animation-delay: 1000ms; }
-}
 
 /* Responsive enhancements */
 @media (prefers-reduced-motion: reduce) {
@@ -853,46 +740,9 @@
 
 /* Add these enhanced animations to your index.css file */
 
-/* Loading progress bar animation - faster */
-@keyframes loading-progress {
-  0% {
-    width: 0%;
-    transform: translateX(-100%);
-  }
-  60% {
-    width: 70%;
-    transform: translateX(-15%);
-  }
-  100% {
-    width: 100%;
-    transform: translateX(0%);
-  }
-}
 
-/* Enhanced pulse glow for loading screen */
-@keyframes pulse-glow-loading {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.1);
-  }
-}
 
-/* Text glow animation for loading screen */
-@keyframes text-glow-loading {
-  0%, 100% {
-    text-shadow: 0 0 20px hsl(var(--primary) / 0.4);
-  }
-  50% {
-    text-shadow: 
-      0 0 20px hsl(var(--primary) / 0.8),
-      0 0 40px hsl(var(--primary) / 0.6),
-      0 0 60px hsl(var(--primary) / 0.4);
-  }
-}
+
 
 /* Seamless text position transition */
 @keyframes title-position-transition {
@@ -935,35 +785,9 @@
   }
 }
 
-/* Background gradient shift for seamless transition */
-@keyframes gradient-shift-transition {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /* Utility classes */
-.animate-loading-progress {
-  animation: loading-progress 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
 
-.animate-pulse-glow-loading {
-  animation: pulse-glow-loading 2s ease-in-out infinite;
-}
-
-.animate-text-glow-loading {
-  animation: text-glow-loading 2s ease-in-out infinite;
-}
-
-.animate-title-transition {
-  animation: title-position-transition 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
 
 .animate-float-gentle {
   animation: float-gentle 4s ease-in-out infinite;
@@ -1049,7 +873,7 @@ body.loading .footer {
   height: 100vh !important;
   z-index: 99999 !important;
   overflow: hidden !important;
-  background: hsl(var(--background)) !important;
+
 }
 
 /* Enhanced transitions for better performance */
@@ -1097,18 +921,6 @@ body.loading .footer {
   filter: blur(4px);
 }
 
-/* Hero section specific styles */
-.hero-title-enter {
-  transform: translateY(20px) scale(1.05);
-  opacity: 0;
-  filter: blur(2px);
-}
-
-.hero-title-active {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-  filter: blur(0);
-}
 
 /* Additional mobile-specific fixes */
 @media (max-width: 768px) {

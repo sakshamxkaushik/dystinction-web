@@ -48,7 +48,7 @@ export default function LoadingScreen({ onComplete, isExiting = false }: Loading
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-center text-foreground relative mb-8 tracking-wider">
               <span className="text-highlight animate-text-glow-loading block">
-                DYSTINCTION
+                DYSTINCTION 
               </span>
             </h1>
           </div>
