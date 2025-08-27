@@ -11,22 +11,13 @@ interface HeroProps {
 const Hero = ({ isVisible = true }: HeroProps) => {
   return (
    <section className="w-full max-w-8xl xl:max-w-8xl mx-auto px-4 sm:px-10 lg:px-12 relative pb-20">
-      {/* Background glow effects */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-90 z-0" />
-      <div className="absolute top-36 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-primary/20 rounded-full blur-3xl z-0" />
-      <div className="absolute bottom-20 right-1/4 w-56 h-56 sm:w-80 sm:h-80 bg-secondary/20 rounded-full blur-3xl z-0" />
-
       <div className="relative w-full max-w-5xl mx-auto px-3 sm:px-6 text-center z-10 flex flex-col items-center space-y-8 md:space-y-12 lg:space-y-16">
         <div className="hero-container pt-40 sm:pt-45 md:pt-45 transition-all duration-1000 ease-out">
           <div className="flex flex-col items-center text-center space-y-4 sm:space-y-6 md:space-y-8">
             {/* Main Title - This will seamlessly continue from loading screen */}
             <h1
               id="hero-title"
-              className={`hero-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-snug sm:leading-tight md:leading-tight max-w-xl sm:max-w-3xl md:max-w-5xl mx-auto transition-all duration-1000 ease-out delay-0 ${
-                isVisible
-                  ? "animate-[hero-appear_1s_ease-out_forwards]"
-                  : "opacity-0"
-              }`}
+              className={`hero-title text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold  max-w-xl sm:max-w-3xl md:max-w-5xl mx-auto}`}
             >
               <span className="block text-highlight">
                 B2B Orders? Ab Instant.

@@ -138,7 +138,7 @@ const CaseStudies = () => {
                   {study.tech.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-3 py-1 text-xs rounded-full bg-muted/50 text-muted-foreground"
+                      className="px-3 py-1 text-xs rounded-full text-muted-foreground"
                     >
                       {tech}
                     </span>
